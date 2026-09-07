@@ -1,0 +1,417 @@
+{
+	"base": [
+		{
+			"faction": 1,
+			"rare": 0,
+			"type": "Light cabin",
+			"name": "Sprinter",
+			"id": "sprinter",
+			"cost": 0,
+			"ps": 450,
+			"energy": 21,
+			"durability": 220,
+			"mass": 350,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 75 },
+				{ "id": "copper", "amount": 15 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 0,
+			"type": "Medium cabin",
+			"name": "Huntsman",
+			"id": "huntsman",
+			"cost": 0,
+			"ps": 450,
+			"energy": 20,
+			"durability": 275,
+			"mass": 700,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 75 },
+				{ "id": "copper", "amount": 15 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 0,
+			"type": "Medium cabin",
+			"name": "WWT1",
+			"id": "wwt1",
+			"cost": 0,
+			"ps": 450,
+			"energy": 20,
+			"durability": 310,
+			"mass": 1200,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 75 },
+				{ "id": "copper", "amount": 15 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 0,
+			"type": "Heavy cabin",
+			"name": "Docker",
+			"id": "docker",
+			"cost": 0,
+			"ps": 450,
+			"energy": 19,
+			"durability": 390,
+			"mass": 2000,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 75 },
+				{ "id": "copper", "amount": 15 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Light cabin",
+			"name": "Growl",
+			"id": "growl",
+			"cost": 3,
+			"ps": 750,
+			"energy": 22,
+			"durability": 230,
+			"mass": 450,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 700 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "sprinter", "amount": 1 },
+				{ "id": "lupara", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Medium cabin",
+			"name": "Wyvern",
+			"id": "wyvern",
+			"cost": 3,
+			"ps": 750,
+			"energy": 21,
+			"durability": 290,
+			"mass": 800,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 700 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "huntsman", "amount": 1 },
+				{ "id": "rs1_ruby", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Heavy cabin",
+			"name": "Trucker",
+			"id": "trucker",
+			"cost": 3,
+			"ps": 750,
+			"energy": 20,
+			"durability": 410,
+			"mass": 3200,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 700 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "docker", "amount": 1 },
+				{ "id": "sprinter", "amount": 1 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 3,
+			"type": "Heavy cabin",
+			"name": "Jawbreaker",
+			"id": "jawbreaker",
+			"cost": 6,
+			"ps": 1100,
+			"energy": 21,
+			"durability": 410,
+			"mass": 3000,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "trucker", "amount": 1 },
+				{ "id": "rd1_listener", "amount": 1 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 4,
+			"type": "Heavy cabin",
+			"name": "Humpback",
+			"id": "humpback",
+			"cost": 0,
+			"ps": 1500,
+			"energy": 22,
+			"durability": 470,
+			"mass": 4000,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "jawbreaker", "amount": 1 },
+				{ "id": "apc_wheel", "amount": 2 },
+				{ "id": "razorback", "amount": 1 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 4,
+			"type": "Heavy cabin",
+			"name": "Bastion",
+			"id": "bastion",
+			"cost": 0,
+			"ps": 1500,
+			"energy": 22,
+			"durability": 495,
+			"mass": 4500,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "jawbreaker", "amount": 1 },
+				{ "id": "apc_wheel_st", "amount": 2 },
+				{ "id": "pu1_charge", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 3,
+			"type": "Medium cabin",
+			"name": "Pilgrim",
+			"id": "pilgrim",
+			"cost": 6,
+			"ps": 1100,
+			"energy": 22,
+			"durability": 310,
+			"mass": 1400,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "wyvern", "amount": 1 },
+				{ "id": "ad12_falcon", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Medium cabin",
+			"name": "Quantum",
+			"id": "quantum",
+			"cost": 0,
+			"ps": 1500,
+			"energy": 22,
+			"durability": 260,
+			"mass": 600,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "pilgrim", "amount": 1 },
+				{ "id": "genesis", "amount": 1 },
+				{ "id": "ad13_hawk", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Medium cabin",
+			"name": "Photon",
+			"id": "photon",
+			"cost": 0,
+			"ps": 1500,
+			"energy": 23,
+			"durability": 335,
+			"mass": 1650,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "pilgrim", "amount": 1 },
+				{ "id": "synthesis", "amount": 1 },
+				{ "id": "ad13_hawk", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 3,
+			"type": "Light cabin",
+			"name": "Bat",
+			"id": "bat",
+			"cost": 6,
+			"ps": 1300,
+			"energy": 22,
+			"durability": 265,
+			"mass": 600,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "growl", "amount": 1 },
+				{ "id": "big_g", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Light cabin",
+			"name": "Werewolf",
+			"id": "werewolf",
+			"cost": 0,
+			"ps": 1800,
+			"energy": 24,
+			"durability": 250,
+			"mass": 600,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "bat", "amount": 1 },
+				{ "id": "shiv_st", "amount": 2 },
+				{ "id": "ampere", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Light cabin",
+			"name": "Harpy",
+			"id": "Harpy",
+			"cost": 0,
+			"ps": 1800,
+			"energy": 24,
+			"durability": 295,
+			"mass": 1000,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "bat", "amount": 1 },
+				{ "id": "shiv", "amount": 2 },
+				{ "id": "sinus0", "amount": 1 }
+			]
+		}
+	],
+
+
+
+	"resources": [
+		{
+			"faction": 0,
+			"rare": 1,
+			"type": "Resource",
+			"name": "Scrap",
+			"id": "scrap",
+			"cost": 0,
+			"ps": 0,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 200,
+			"craft": [
+				{ "id": "badge", "amount": 120 }
+			]
+		}, {
+			"faction": 0,
+			"rare": 1,
+			"type": "Resource",
+			"name": "Copper",
+			"id": "copper",
+			"cost": 0,
+			"ps": 0,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 50,
+			"craft": [
+				{ "id": "badge", "amount": 20 }
+			]
+		}, {
+			"faction": 0,
+			"rare": 1,
+			"type": "Resource",
+			"name": "Wires",
+			"id": "wires",
+			"cost": 0,
+			"ps": 0,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 25,
+			"craft": [
+				{ "id": "badge", "amount": 40 }
+			]
+		}, {
+			"faction": 0,
+			"rare": 1,
+			"type": "Resource",
+			"name": "Plastic",
+			"id": "plastic",
+			"cost": 0,
+			"ps": 0,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 25,
+			"craft": [
+				{ "id": "badge", "amount": 100 }
+			]
+		}, {
+			"faction": 0,
+			"rare": 1,
+			"type": "Resource",
+			"name": "Electronics",
+			"id": "electronics",
+			"cost": 0,
+			"ps": 0,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 10,
+			"craft": [
+				{ "id": "badge", "amount": 70 }
+			]
+		}, {
+			"faction": 0,
+			"rare": 1,
+			"type": "Resource",
+			"name": "Batteries",
+			"id": "batteries",
+			"cost": 0,
+			"ps": 0,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 100,
+			"craft": [
+				{ "id": "badge", "amount": 180 }
+			]
+		}
+	]
+}

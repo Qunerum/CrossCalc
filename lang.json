@@ -1,0 +1,34 @@
+{
+	"pl": {
+		"title": "Baza Części Crossout",
+		"search_placeholder": "Szukaj przedmiotu (np. sc)...",
+		"no_items": "Brak pasujących przedmiotów.",
+		"error_load": "Nie udało się wczytać bazy danych.",
+		"category": "Kategoria",
+		"loading": "Ładowanie...",
+		"back": "← Powrót",
+		"faction": "Frakcja",
+		"type": "Typ",
+		"ps": "Wynik mocy (PS)",
+		"mass": "Masa",
+		"durability": "Wytrzymałość",
+		"pcs": "szt.",
+		"req_mat": "Wymagane materiały"
+	},
+	"en": {
+		"title": "Crossout Parts Database",
+		"search_placeholder": "Search item (e.g., sc)...",
+		"no_items": "No matching items found.",
+		"error_load": "Failed to load database.",
+		"category": "Category",
+		"loading": "Loading...",
+		"back": "← Back",
+		"faction": "Faction",
+		"type": "Typ",
+		"ps": "Power Score",
+		"mass": "Mass",
+		"durability": "Durability",
+		"pcs": "pcs",
+		"req_mat": "Required materials"
+	}
+}
