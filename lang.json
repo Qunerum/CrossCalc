@@ -15,7 +15,13 @@
 		"pcs": "szt.",
 		"req_mat": "Wymagane materiały",
 		"for": "dla",
-		"total": "Łącznie"
+		"total": "Łącznie",
+		"eg": "np.",
+		"market": "Kalkulator rynku i zysków",
+		"atax": "Po opodatkowaniu (opłata 10%)",
+		"coins": "Monet",
+		"tcc": "Całkowity koszt",
+		"dsp": "Pożądana cena sprzedaży (rynkowa)"
 	},
 	"en": {
 		"title": "Crossout Parts Database",
@@ -33,6 +39,12 @@
 		"pcs": "pcs",
 		"req_mat": "Required materials",
 		"for": "for",
-		"total": "Total"
+		"total": "Total",
+		"eg": "e.g.",
+		"market": "Market & Profit Calculator",
+		"atax": "After Tax (10% fee)",
+		"coins": "Coins",
+		"tcc": "Total Craft Cost",
+		"dsp": "Desired Selling Price (Market)"
 	}
 }

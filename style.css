@@ -140,3 +140,52 @@ sl { text-transform: capitalize; }
 	border-top: 1px solid #333;
 	width: 100%;
 }
+.market-calculator hr {
+	border: none;
+	border-top: 1px solid #333;
+	margin: 15px 0;
+}
+.market-inputs-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+.market-input-group { width: 200px; }
+.market-price-input,
+.market-sell-input {
+	width: 100%;
+	background: #1a1a1a;
+	border: 1px solid #444;
+	color: #fff;
+	padding: 5px 8px;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.market-price-input:disabled,
+.market-sell-input:disabled {
+	background: #121212;
+	color: #666;
+	border-color: #222;
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+.market-sell-input {
+	padding: 6px 8px;
+	margin-top: 4px;
+}
+.market-total-box {
+	background: #1e1e1e;
+	padding: 0px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+.market-total-value {
+	color: #42c2b6;
+	font-weight: bold;
+}
+.market-profit-box { margin-top: 8px; }
+.market-profit-value {
+	color: #ff9a00;
+	font-weight: bold;
+}

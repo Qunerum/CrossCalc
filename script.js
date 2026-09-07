@@ -138,8 +138,8 @@ async function initItemPage() {
 		}
 		if (container) {
 			if (item) {
-				const t = translations[currentLang] || {};
-				const faction = t.faction || "Faction",
+				const t = translations[currentLang] || {},
+					faction = t.faction || "Faction",
 					category = t.category || "Category",
 					type = t.type || "Type",
 					ps = t.ps || "PS",
@@ -148,7 +148,13 @@ async function initItemPage() {
 					pcs = t.pcs || "pcs",
 					req_mat = t.req_mat || "Required materials",
 					_for = t.for || "for",
-					total = t.total || "Total";
+					total = t.total || "Total",
+					eg = t.eg || "e.g.",
+					market = t.market || "Market & Profit Calculator",
+					atax = t.atax || "After Tax (10% fee)",
+					coins = t.coins || "Coins",
+					tcc = t.tcc || "Total Craft Cost",
+					dsp = t.dsp || "Desired Selling Price (Market)";
 				let forPcs = "";
 				container.style.setProperty('--rare', `#${rares[item.rare]}`);
 				let craftingHTML = '';
@@ -164,45 +170,89 @@ async function initItemPage() {
 							}
 						}
 						const ingID = ing.id,
-						ingName = ingData ? ingData.name : `#${ingID}`,
-						ingRare = ingData ? rares[ingData.rare] : "9b9b9b",
-						ingType = ingData ? ingData.type : "(NULL)",
-						ingFaction = ingData ? factions[ingData.faction] : "(NULL)",
-						ingCount = ing.amount;
+							ingName = ingData ? ingData.name : `#${ingID}`,
+							ingRare = ingData ? rares[ingData.rare] : "9b9b9b",
+							ingType = ingData ? ingData.type : "(NULL)",
+							ingFaction = ingData ? factions[ingData.faction] : "(NULL)",
+							ingCount = ing.amount;
 						cardsHTML += `
 						<a href="item.html?id=${ing.id}" class="card" style="--rare: #${ingRare}; text-decoration: none; color: #fff;">
 						<stit>${ingName}</stit>
 						<des>${ingCount} ${pcs}</des>
-						<sdes>${ingFaction}</sdes>
 						<sdes>${ingType}</sdes>
+						<sdes>#${ingID}</sdes>
 						</a>
 						`;
 					});
 					const cc = item.craft_count,
-					_scrap = countItemInCraftTree(item.id, "scrap", data),
-					_wires = countItemInCraftTree(item.id, "wires", data),
-					_copper = countItemInCraftTree(item.id, "copper", data),
-					_plastic = countItemInCraftTree(item.id, "plastic", data),
-					_electronics = countItemInCraftTree(item.id, "electronics", data),
-					_batteries = countItemInCraftTree(item.id, "batteries", data);
+						_scrap = countItemInCraftTree(item.id, "scrap", data),
+						_wires = countItemInCraftTree(item.id, "wires", data),
+						_copper = countItemInCraftTree(item.id, "copper", data),
+						_plastic = countItemInCraftTree(item.id, "plastic", data),
+						_electronics = countItemInCraftTree(item.id, "electronics", data),
+						_batteries = countItemInCraftTree(item.id, "batteries", data);
 					if (cc > 1) forPcs = ` (${_for} ${cc} ${pcs})`;
 					const tScrap = _scrap > 0 ? `<des>Scrap: ${_scrap}</des>` : '',
-					tWires = _wires > 0 ? `<des>Wires: ${_wires}</des>` : '',
-					tCopper = _copper > 0 ? `<des>Copper: ${_copper}</des>` : '',
-					tPlastic = _plastic > 0 ? `<des>Plastic: ${_plastic}</des>` : '',
-					tElectro = _electronics > 0 ? `<des>Electronics: ${_electronics}</des>` : '',
-					tBattery = _batteries > 0 ? `<des>Batteries: ${_batteries}</des>` : '';
+						tWires = _wires > 0 ? `<des>Wires: ${_wires}</des>` : '',
+						tCopper = _copper > 0 ? `<des>Copper: ${_copper}</des>` : '',
+						tPlastic = _plastic > 0 ? `<des>Plastic: ${_plastic}</des>` : '',
+						tElectro = _electronics > 0 ? `<des>Electronics: ${_electronics}</des>` : '',
+						tBattery = _batteries > 0 ? `<des>Batteries: ${_batteries}</des>` : '',
+						marketPrices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {scrap: 0, wires: 0, copper: 0, plastic: 0, electronics: 0, batteries: 0 },
+						calcCost = (amount, pricePer1k) => (amount / 1000) * (pricePer1k || 0),
+						costScrap = calcCost(_scrap, marketPrices.scrap), scrapDis = _scrap <= 0 ? " disabled" : "",
+						costWires = calcCost(_wires, marketPrices.wires), wiresDis = _wires <= 0 ? " disabled" : "",
+						costCopper = calcCost(_copper, marketPrices.copper), copperDis = _copper <= 0 ? " disabled" : "",
+						costPlastic = calcCost(_plastic, marketPrices.plastic), plasticDis = _plastic <= 0 ? " disabled" : "",
+						costElectro = calcCost(_electronics, marketPrices.electronics), electroDis = _electronics <= 0 ? " disabled" : "",
+						costBattery = calcCost(_batteries, marketPrices.batteries), batteryDis = _batteries <= 0 ? " disabled" : "",
+						totalCoinCost = costScrap + costWires + costCopper + costPlastic + costElectro + costBattery;
 					craftingHTML = `
 					<div class="craft-section">
-					<stit>${req_mat}${forPcs}:</stit><br><br>
-					<div class="craft-grid">${cardsHTML}</div><br>
-					<stit>${total}:</stit>
-					${tScrap}
-					${tWires}
-					${tCopper}
-					${tPlastic}
-					${tElectro}
-					${tBattery}
+						<stit>${req_mat}${forPcs}:</stit><br><br>
+						<div class="craft-grid">${cardsHTML}</div><br>
+						<stit>${total}:</stit>
+						${tScrap}
+						${tWires}
+						${tCopper}
+						${tPlastic}
+						${tElectro}
+						${tBattery}
+					</div>
+					<div class="market-calculator"><hr>
+						<stit>${market}:</stit><br>
+						<div class="market-inputs-grid">
+							<div class="market-input-group">
+								<label>Scrap (1k):</label>
+								<input type="number" class="market-price-input" data-res="scrap" value="${marketPrices.scrap}" placeholder="0"${scrapDis}>
+							</div>
+							<div class="market-input-group">
+								<label>Wires (1k):</label>
+								<input type="number" class="market-price-input" data-res="wires" value="${marketPrices.wires}" placeholder="0"${wiresDis}>
+							</div>
+							<div class="market-input-group">
+								<label>Copper (1k):</label>
+								<input type="number" class="market-price-input" data-res="copper" value="${marketPrices.copper}" placeholder="0"${copperDis}>
+							</div>
+							<div class="market-input-group">
+								<label>Plastic (1k):</label>
+								<input type="number" class="market-price-input" data-res="plastic" value="${marketPrices.plastic}" placeholder="0"${plasticDis}>
+							</div>
+							<div class="market-input-group">
+								<label>Electronics (1k):</label>
+								<input type="number" class="market-price-input" data-res="electronics" value="${marketPrices.electronics}" placeholder="0"${electroDis}>
+							</div>
+							<div class="market-input-group">
+								<label>Batteries (1k):</label>
+								<input type="number" class="market-price-input" data-res="batteries" value="${marketPrices.batteries}" placeholder="0"${batteryDis}>
+							</div>
+						</div>
+						<div class="market-total-box"><des><b>${tcc}:</b> <span id="totalCostDisplay" class="market-total-value">${totalCoinCost.toFixed(2)}</span> ${coins}</des></div>
+						<div class="market-field">
+							<label>${dsp}:</label>
+							<input type="number" id="sellPriceInput" class="market-sell-input" placeholder="np. 250">
+							<div class="market-profit-box"><des><b>${atax}:</b> <span id="netProfitDisplay" class="market-profit-value">0.00</span> ${coins}</des></div>
+						</div>
 					</div>
 					`;
 				}
@@ -224,6 +274,45 @@ async function initItemPage() {
 		console.error("Error loading details:", error);
 		if (container) container.innerHTML = '<p style="color: red;">Data loading error.</p>';
 	}
+}
+document.addEventListener('input', (e) => {
+	if (e.target.classList.contains('market-price-input')) {
+		const prices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {};
+		const resName = e.target.getAttribute('data-res');
+		prices[resName] = parseFloat(e.target.value) || 0;
+		localStorage.setItem('crosscalc_prices', JSON.stringify(prices));
+		updateLiveCraftCost();
+	}
+	if (e.target.id === 'sellPriceInput') {
+		const sellPrice = parseFloat(e.target.value) || 0;
+		const tax = sellPrice * 0.10;
+		const netProfit = sellPrice - tax;
+		const profitDisplay = document.getElementById('netProfitDisplay');
+		if (profitDisplay) {
+			profitDisplay.textContent = netProfit.toFixed(2);
+			profitDisplay.style.color = netProfit > 0 ? '#42c2b6' : '#ff5100';
+		}
+	}
+});
+function updateLiveCraftCost() {
+	const prices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {};
+	let totalCost = 0;
+	const craftSection = document.querySelector('.craft-section');
+	if (!craftSection) return;
+	craftSection.querySelectorAll('des').forEach(el => {
+		const text = el.textContent;
+		for (const [res, price] of Object.entries(prices)) {
+			if (text.toLowerCase().startsWith(res)) {
+				const parts = text.split(':');
+				if (parts.length > 1) {
+					const amount = parseFloat(parts[1].trim()) || 0;
+					totalCost += (amount / 1000) * (price || 0);
+				}
+			}
+		}
+	});
+	const costDisplay = document.getElementById('totalCostDisplay');
+	if (costDisplay) costDisplay.textContent = totalCost.toFixed(2);
 }
 document.addEventListener('DOMContentLoaded', () => {
 	if (document.getElementById('itemsContainer')) initIndexPage();
