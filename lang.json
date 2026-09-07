@@ -13,7 +13,9 @@
 		"mass": "Masa",
 		"durability": "Wytrzymałość",
 		"pcs": "szt.",
-		"req_mat": "Wymagane materiały"
+		"req_mat": "Wymagane materiały",
+		"for": "dla",
+		"total": "Łącznie"
 	},
 	"en": {
 		"title": "Crossout Parts Database",
@@ -29,6 +31,8 @@
 		"mass": "Mass",
 		"durability": "Durability",
 		"pcs": "pcs",
-		"req_mat": "Required materials"
+		"req_mat": "Required materials",
+		"for": "for",
+		"total": "Total"
 	}
 }

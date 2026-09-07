@@ -100,6 +100,24 @@ function filterItems() {
 	displayItems(filtered);
 }
 // item.html
+function countItemInCraftTree(currentItemId, targetId, allData, currentQuantity = 1) {
+	let totalCount = 0, targetItem = null;
+	for (const cat in allData) {
+		const match = allData[cat].find(i => i.id.toLowerCase() === currentItemId.toLowerCase());
+		if (match) {
+			targetItem = match;
+			break;
+		}
+	}
+	if (currentItemId.toLowerCase() === targetId.toLowerCase()) totalCount += currentQuantity;
+	if (!targetItem || !targetItem.craft || targetItem.craft.length === 0) return totalCount;
+	const craftCount = targetItem.craft_count || 1, multiplier = currentQuantity / craftCount;
+	targetItem.craft.forEach(ing => {
+		const ingAmount = ing.amount * multiplier;
+		totalCount += countItemInCraftTree(ing.id, targetId, allData, ingAmount);
+	});
+	return totalCount;
+}
 async function initItemPage() {
 	await initCommon();
 	const urlParams = new URLSearchParams(window.location.search), itemId = urlParams.get('id'), container = document.getElementById('itemDetails');
@@ -120,14 +138,18 @@ async function initItemPage() {
 		}
 		if (container) {
 			if (item) {
-				const faction = translations[currentLang].faction,
-					category = translations[currentLang].category,
-					type = translations[currentLang].type,
-					ps = translations[currentLang].ps,
-					durab = translations[currentLang].durability,
-					mass = translations[currentLang].mass;
-					pcs = translations[currentLang].pcs,
-					req_mat = translations[currentLang].req_mat;
+				const t = translations[currentLang] || {};
+				const faction = t.faction || "Faction",
+					category = t.category || "Category",
+					type = t.type || "Type",
+					ps = t.ps || "PS",
+					durab = t.durability || "Durability",
+					mass = t.mass || "Mass",
+					pcs = t.pcs || "pcs",
+					req_mat = t.req_mat || "Required materials",
+					_for = t.for || "for",
+					total = t.total || "Total";
+				let forPcs = "";
 				container.style.setProperty('--rare', `#${rares[item.rare]}`);
 				let craftingHTML = '';
 				if (item.craft && item.craft.length > 0) {
@@ -141,7 +163,8 @@ async function initItemPage() {
 								break;
 							}
 						}
-						const ingName = ingData ? ingData.name : ing.id,
+						const ingID = ing.id,
+						ingName = ingData ? ingData.name : `#${ingID}`,
 						ingRare = ingData ? rares[ingData.rare] : "9b9b9b",
 						ingType = ingData ? ingData.type : "(NULL)",
 						ingFaction = ingData ? factions[ingData.faction] : "(NULL)",
@@ -155,16 +178,37 @@ async function initItemPage() {
 						</a>
 						`;
 					});
+					const cc = item.craft_count,
+					_scrap = countItemInCraftTree(item.id, "scrap", data),
+					_wires = countItemInCraftTree(item.id, "wires", data),
+					_copper = countItemInCraftTree(item.id, "copper", data),
+					_plastic = countItemInCraftTree(item.id, "plastic", data),
+					_electronics = countItemInCraftTree(item.id, "electronics", data),
+					_batteries = countItemInCraftTree(item.id, "batteries", data);
+					if (cc > 1) forPcs = ` (${_for} ${cc} ${pcs})`;
+					const tScrap = _scrap > 0 ? `<des>Scrap: ${_scrap}</des>` : '',
+					tWires = _wires > 0 ? `<des>Wires: ${_wires}</des>` : '',
+					tCopper = _copper > 0 ? `<des>Copper: ${_copper}</des>` : '',
+					tPlastic = _plastic > 0 ? `<des>Plastic: ${_plastic}</des>` : '',
+					tElectro = _electronics > 0 ? `<des>Electronics: ${_electronics}</des>` : '',
+					tBattery = _batteries > 0 ? `<des>Batteries: ${_batteries}</des>` : '';
 					craftingHTML = `
 					<div class="craft-section">
-					<h3>${req_mat}:</h3>
-					<div class="craft-grid">${cardsHTML}</div>
+					<stit>${req_mat}${forPcs}:</stit><br><br>
+					<div class="craft-grid">${cardsHTML}</div><br>
+					<stit>${total}:</stit>
+					${tScrap}
+					${tWires}
+					${tCopper}
+					${tPlastic}
+					${tElectro}
+					${tBattery}
 					</div>
 					`;
 				}
 				container.style.setProperty('--rare', `#${rares[item.rare]}`);
 				container.innerHTML = `
-				<tit>${item.name}</tit><id>${item.id}</id>
+				<tit>${item.name}</tit><id>#${item.id}</id>
 				<des><b>${faction}:</b> ${factions[item.faction]}</des>
 				<des><b>${category}:</b> <sl>${item.category}</sl></des>
 				<des><b>${type}:</b> ${item.type}</des>
