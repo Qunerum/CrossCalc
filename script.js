@@ -51,7 +51,10 @@ async function initIndexPage() {
 	try {
 		const response = await fetch(databaseFile), data = await response.json();
 		allItems = [];
-		for (const category in data) data[category].forEach(item => { allItems.push({ ...item, category: category }); });
+		for (const category in data) {
+			const sortedCategoryItems = [...data[category]].sort((a, b) => a.rare - b.rare);
+			sortedCategoryItems.forEach(item => { allItems.push({ ...item, category: category }); });
+		}
 		displayItems(allItems);
 	} catch (error) {
 		console.error("Error while loading Database:", error);
@@ -149,12 +152,12 @@ async function initItemPage() {
 					req_mat = t.req_mat || "Required materials",
 					_for = t.for || "for",
 					total = t.total || "Total",
-					eg = t.eg || "e.g.",
 					market = t.market || "Market & Profit Calculator",
 					atax = t.atax || "After Tax (10% fee)",
 					coins = t.coins || "Coins",
 					tcc = t.tcc || "Total Craft Cost",
-					dsp = t.dsp || "Desired Selling Price (Market)";
+					dsp = t.dsp || "Desired Selling Price (Market)",
+					eg = t.eg || "e.g.";
 				let forPcs = "";
 				container.style.setProperty('--rare', `#${rares[item.rare]}`);
 				let craftingHTML = '';
@@ -171,9 +174,8 @@ async function initItemPage() {
 						}
 						const ingID = ing.id,
 							ingName = ingData ? ingData.name : `#${ingID}`,
-							ingRare = ingData ? rares[ingData.rare] : "9b9b9b",
+							ingRare = ingData ? rares[ingData.rare] : "dd2222",
 							ingType = ingData ? ingData.type : "(NULL)",
-							ingFaction = ingData ? factions[ingData.faction] : "(NULL)",
 							ingCount = ing.amount;
 						cardsHTML += `
 						<a href="item.html?id=${ing.id}" class="card" style="--rare: #${ingRare}; text-decoration: none; color: #fff;">
@@ -184,75 +186,49 @@ async function initItemPage() {
 						</a>
 						`;
 					});
-					const cc = item.craft_count,
-						_scrap = countItemInCraftTree(item.id, "scrap", data),
-						_wires = countItemInCraftTree(item.id, "wires", data),
-						_copper = countItemInCraftTree(item.id, "copper", data),
-						_plastic = countItemInCraftTree(item.id, "plastic", data),
-						_electronics = countItemInCraftTree(item.id, "electronics", data),
-						_batteries = countItemInCraftTree(item.id, "batteries", data);
+					const cc = item.craft_count;
 					if (cc > 1) forPcs = ` (${_for} ${cc} ${pcs})`;
-					const tScrap = _scrap > 0 ? `<des>Scrap: ${_scrap}</des>` : '',
-						tWires = _wires > 0 ? `<des>Wires: ${_wires}</des>` : '',
-						tCopper = _copper > 0 ? `<des>Copper: ${_copper}</des>` : '',
-						tPlastic = _plastic > 0 ? `<des>Plastic: ${_plastic}</des>` : '',
-						tElectro = _electronics > 0 ? `<des>Electronics: ${_electronics}</des>` : '',
-						tBattery = _batteries > 0 ? `<des>Batteries: ${_batteries}</des>` : '',
-						marketPrices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {scrap: 0, wires: 0, copper: 0, plastic: 0, electronics: 0, batteries: 0 },
-						calcCost = (amount, pricePer1k) => (amount / 1000) * (pricePer1k || 0),
-						costScrap = calcCost(_scrap, marketPrices.scrap), scrapDis = _scrap <= 0 ? " disabled" : "",
-						costWires = calcCost(_wires, marketPrices.wires), wiresDis = _wires <= 0 ? " disabled" : "",
-						costCopper = calcCost(_copper, marketPrices.copper), copperDis = _copper <= 0 ? " disabled" : "",
-						costPlastic = calcCost(_plastic, marketPrices.plastic), plasticDis = _plastic <= 0 ? " disabled" : "",
-						costElectro = calcCost(_electronics, marketPrices.electronics), electroDis = _electronics <= 0 ? " disabled" : "",
-						costBattery = calcCost(_batteries, marketPrices.batteries), batteryDis = _batteries <= 0 ? " disabled" : "",
-						totalCoinCost = costScrap + costWires + costCopper + costPlastic + costElectro + costBattery;
+					const resourceCategoryKey = Object.keys(data).find(cat => cat.toLowerCase() === 'resources'),
+						resourceItems = resourceCategoryKey ? data[resourceCategoryKey] : [],
+						resourceCounts = {};
+					resourceItems.forEach(res => {
+						const count = countItemInCraftTree(item.id, res.id, data);
+						if (count > 0) {
+							resourceCounts[res.id] = count;
+						}
+					});
+					let tTotalsHTML = '', marketInputsHTML = '', totalCoinCost = 0;
+					const marketPrices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {};
+					for (const [resId, count] of Object.entries(resourceCounts)) {
+						const resData = resourceItems.find(r => r.id === resId), resName = resData ? resData.name : resId;
+						tTotalsHTML += `<des data-res="${resId}"><b>${resName}:</b> ${count}</des>`;
+						const price = marketPrices[resId] || 0;
+						totalCoinCost += (count / 1000) * price;
+						marketInputsHTML += `
+						<div class="market-input-group">
+						<label>${resName} (1k):</label>
+						<input type="number" class="market-price-input" data-res="${resId}" value="${price || ''}" placeholder="0">
+						</div>
+						`;
+					}
 					craftingHTML = `
 					<div class="craft-section">
-						<stit>${req_mat}${forPcs}:</stit><br><br>
-						<div class="craft-grid">${cardsHTML}</div><br>
-						<stit>${total}:</stit>
-						${tScrap}
-						${tWires}
-						${tCopper}
-						${tPlastic}
-						${tElectro}
-						${tBattery}
+					<stit>${req_mat}${forPcs}:</stit><br><br>
+					<div class="craft-grid">${cardsHTML}</div><br>
+					<stit>${total}:</stit>
+					${tTotalsHTML}
 					</div>
 					<div class="market-calculator"><hr>
-						<stit>${market}:</stit><br>
-						<div class="market-inputs-grid">
-							<div class="market-input-group">
-								<label>Scrap (1k):</label>
-								<input type="number" class="market-price-input" data-res="scrap" value="${marketPrices.scrap}" placeholder="0"${scrapDis}>
-							</div>
-							<div class="market-input-group">
-								<label>Wires (1k):</label>
-								<input type="number" class="market-price-input" data-res="wires" value="${marketPrices.wires}" placeholder="0"${wiresDis}>
-							</div>
-							<div class="market-input-group">
-								<label>Copper (1k):</label>
-								<input type="number" class="market-price-input" data-res="copper" value="${marketPrices.copper}" placeholder="0"${copperDis}>
-							</div>
-							<div class="market-input-group">
-								<label>Plastic (1k):</label>
-								<input type="number" class="market-price-input" data-res="plastic" value="${marketPrices.plastic}" placeholder="0"${plasticDis}>
-							</div>
-							<div class="market-input-group">
-								<label>Electronics (1k):</label>
-								<input type="number" class="market-price-input" data-res="electronics" value="${marketPrices.electronics}" placeholder="0"${electroDis}>
-							</div>
-							<div class="market-input-group">
-								<label>Batteries (1k):</label>
-								<input type="number" class="market-price-input" data-res="batteries" value="${marketPrices.batteries}" placeholder="0"${batteryDis}>
-							</div>
-						</div>
-						<div class="market-total-box"><des><b>${tcc}:</b> <span id="totalCostDisplay" class="market-total-value">${totalCoinCost.toFixed(2)}</span> ${coins}</des></div>
-						<div class="market-field">
-							<label>${dsp}:</label>
-							<input type="number" id="sellPriceInput" class="market-sell-input" placeholder="np. 250">
-							<div class="market-profit-box"><des><b>${atax}:</b> <span id="netProfitDisplay" class="market-profit-value">0.00</span> ${coins}</des></div>
-						</div>
+					<stit>${market}:</stit><br>
+					<div class="market-inputs-grid">
+					${marketInputsHTML}
+					</div>
+					<div class="market-total-box"><des><b>${tcc}:</b> <span id="totalCostDisplay" class="market-total-value">${totalCoinCost.toFixed(2)}</span> ${coins}</des></div>
+					<div class="market-field">
+					<label>${dsp}:</label>
+					<input type="number" id="sellPriceInput" class="market-sell-input" placeholder="${eg} 250">
+					<div class="market-profit-box"><des><b>${atax}:</b> <span id="netProfitDisplay" class="market-profit-value">0.00</span> ${coins}</des></div>
+					</div>
 					</div>
 					`;
 				}
@@ -299,16 +275,14 @@ function updateLiveCraftCost() {
 	let totalCost = 0;
 	const craftSection = document.querySelector('.craft-section');
 	if (!craftSection) return;
-	craftSection.querySelectorAll('des').forEach(el => {
+	craftSection.querySelectorAll('des[data-res]').forEach(el => {
+		const resId = el.getAttribute('data-res');
+		const price = prices[resId] || 0;
 		const text = el.textContent;
-		for (const [res, price] of Object.entries(prices)) {
-			if (text.toLowerCase().startsWith(res)) {
-				const parts = text.split(':');
-				if (parts.length > 1) {
-					const amount = parseFloat(parts[1].trim()) || 0;
-					totalCost += (amount / 1000) * (price || 0);
-				}
-			}
+		const parts = text.split(':');
+		if (parts.length > 1) {
+			const amount = parseFloat(parts[1].trim()) || 0;
+			totalCost += (amount / 1000) * (price || 0);
 		}
 	});
 	const costDisplay = document.getElementById('totalCostDisplay');

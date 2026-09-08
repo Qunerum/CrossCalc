@@ -51,7 +51,7 @@ body {
 	border: 1px solid #333;
 	border-left: 6px solid var(--rare);
 	border-radius: 8px;
-	width: 160px;
+	width: 200px;
 	height: 92px;
 	display: flex;
 	flex-direction: column;
@@ -61,6 +61,12 @@ body {
 	box-sizing: border-box;
 	box-shadow: 0 4px 6px rgba(0,0,0,1);
 	transition-duration: 0.2s;
+}
+.card * {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-width: 0;
 }
 .card:hover {
 	transform: translateY(-3px);
@@ -161,14 +167,6 @@ sl { text-transform: capitalize; }
 	padding: 5px 8px;
 	border-radius: 4px;
 	box-sizing: border-box;
-}
-.market-price-input:disabled,
-.market-sell-input:disabled {
-	background: #121212;
-	color: #666;
-	border-color: #222;
-	cursor: not-allowed;
-	opacity: 0.7;
 }
 .market-sell-input {
 	padding: 6px 8px;
