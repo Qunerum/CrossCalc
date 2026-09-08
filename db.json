@@ -1089,6 +1089,116 @@
 				{ "id": "boom", "amount": 1 },
 				{ "id": "goblin", "amount": 1 }
 			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Machine gun",
+			"name": "Spectre-2",
+			"id": "spectre2",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 280,
+			"mass": 254,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "sinus0", "amount": 1 },
+				{ "id": "ad13_hawk", "amount": 1 },
+				{ "id": "maxwell", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Autocannon",
+			"name": "AC72 Whirlwind",
+			"id": "ac72_whirlwind",
+			"cost": 15,
+			"ps": 1350,
+			"energy": -10,
+			"durability": 411,
+			"mass": 486,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "ac50_storm", "amount": 1 },
+				{ "id": "chameleon", "amount": 1 },
+				{ "id": "sinus0", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Machine gun",
+			"name": "M-29 Protector",
+			"id": "m29_protector",
+			"cost": 15,
+			"ps": 810,
+			"energy": -6,
+			"durability": 348,
+			"mass": 230,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "sinus0", "amount": 1 },
+				{ "id": "dun_horse", "amount": 1 },
+				{ "id": "chameleon", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Autonomous weapon",
+			"name": "MD-3 Owl",
+			"id": "md3_owl",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 161,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "ad13_hawk", "amount": 1 },
+				{ "id": "ampere", "amount": 1 },
+				{ "id": "sinus0", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Machine gun",
+			"name": "MG13 Equalizer",
+			"id": "mg13_equalizer",
+			"cost": 15,
+			"ps": 810,
+			"energy": -6,
+			"durability": 270,
+			"mass": 290,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "ac50_storm", "amount": 1 },
+				{ "id": "sinus0", "amount": 1 },
+				{ "id": "ampere", "amount": 1 }
+			]
 		}
 	],
 

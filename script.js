@@ -46,8 +46,24 @@ const rares = [
 	"Firestarters"
 ];
 // index.html
+let rareFilter = [false, false, false, false, false, false, false];
+function addBtn(container, id) {
+	const btn = document.createElement('button');
+	btn.className = 'rare-btn';
+	if (rareFilter[id]) btn.setAttribute('on', '');
+	btn.innerHTML = `<div class="rare-box" style="background-color: #${rares[id]};"></div>`;
+	btn.onclick = () => filterByRare(id, btn);
+	container.appendChild(btn);
+}
+function viewRareButtons() {
+	const c = document.getElementById('rare-choose');
+	if (!c) return;
+	c.innerHTML = '';
+	for (let i = 0; i <= 6; i++) addBtn(c, i);
+}
 async function initIndexPage() {
 	await initCommon();
+	viewRareButtons();
 	try {
 		const response = await fetch(databaseFile), data = await response.json();
 		allItems = [];
@@ -62,6 +78,23 @@ async function initIndexPage() {
 		const errText = translations[currentLang]?.error_load || "Loading error.";
 		if (container) container.innerHTML = `<p style="color: red;">${errText}</p>`;
 	}
+}
+function filterByRare(rareIndex, btnElement) {
+	rareFilter[rareIndex] = !rareFilter[rareIndex];
+	if (rareFilter[rareIndex]) btnElement.setAttribute('on', '');
+	else btnElement.removeAttribute('on');
+	filterItems();
+}
+function filterItems() {
+	const searchInput = document.getElementById('searchInput');
+	const query = searchInput ? searchInput.value.toLowerCase() : '';
+	const hasAnyFilter = rareFilter.some(val => val === true);
+	const filtered = allItems.filter(item => {
+		const matchesQuery = item.name.toLowerCase().startsWith(query);
+		const matchesRare = !hasAnyFilter || rareFilter[item.rare];
+		return matchesQuery && matchesRare;
+	});
+	displayItems(filtered);
 }
 function displayItems(items) {
 	const container = document.getElementById('itemsContainer');
@@ -95,12 +128,6 @@ function displayItems(items) {
 		`;
 		container.appendChild(card);
 	});
-}
-function filterItems() {
-	const searchInput = document.getElementById('searchInput');
-	if (!searchInput) return;
-	const query = searchInput.value.toLowerCase(), filtered = allItems.filter(item => { return item.name.toLowerCase().startsWith(query); });
-	displayItems(filtered);
 }
 // item.html
 function countItemInCraftTree(currentItemId, targetId, allData, currentQuantity = 1) {
