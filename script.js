@@ -86,12 +86,12 @@ function filterByRare(rareIndex, btnElement) {
 	filterItems();
 }
 function filterItems() {
-	const searchInput = document.getElementById('searchInput');
-	const query = searchInput ? searchInput.value.toLowerCase() : '';
-	const hasAnyFilter = rareFilter.some(val => val === true);
-	const filtered = allItems.filter(item => {
-		const matchesQuery = item.name.toLowerCase().startsWith(query);
-		const matchesRare = !hasAnyFilter || rareFilter[item.rare];
+	const searchInput = document.getElementById('searchInput'),
+		query = searchInput ? searchInput.value.toLowerCase() : '',
+		hasAnyFilter = rareFilter.some(val => val === true),
+		filtered = allItems.filter(item => {
+			const matchesQuery = item.name.toLowerCase().startsWith(query),
+				matchesRare = !hasAnyFilter || rareFilter[item.rare];
 		return matchesQuery && matchesRare;
 	});
 	displayItems(filtered);
@@ -131,7 +131,7 @@ function displayItems(items) {
 }
 // item.html
 function countItemInCraftTree(currentItemId, targetId, allData, currentQuantity = 1) {
-	let totalCount = 0, targetItem = null;
+	let totalCount = 0, totalCost = 0, targetItem = null;
 	for (const cat in allData) {
 		const match = allData[cat].find(i => i.id.toLowerCase() === currentItemId.toLowerCase());
 		if (match) {
@@ -140,13 +140,19 @@ function countItemInCraftTree(currentItemId, targetId, allData, currentQuantity 
 		}
 	}
 	if (currentItemId.toLowerCase() === targetId.toLowerCase()) totalCount += currentQuantity;
-	if (!targetItem || !targetItem.craft || targetItem.craft.length === 0) return totalCount;
+	if (targetItem && targetItem.cost) {
+		const craftCount = targetItem.craft_count || 1;
+		totalCost += targetItem.cost * (currentQuantity / craftCount);
+	}
+	if (!targetItem || !targetItem.craft || targetItem.craft.length === 0) return { count: totalCount, cost: totalCost };
 	const craftCount = targetItem.craft_count || 1, multiplier = currentQuantity / craftCount;
 	targetItem.craft.forEach(ing => {
 		const ingAmount = ing.amount * multiplier;
-		totalCount += countItemInCraftTree(ing.id, targetId, allData, ingAmount);
+		const subResult = countItemInCraftTree(ing.id, targetId, allData, ingAmount);
+		totalCount += subResult.count;
+		totalCost += subResult.cost;
 	});
-	return totalCount;
+	return { count: totalCount, cost: totalCost };
 }
 async function initItemPage() {
 	await initCommon();
@@ -181,7 +187,10 @@ async function initItemPage() {
 					total = t.total || "Total",
 					market = t.market || "Market & Profit Calculator",
 					atax = t.atax || "After Tax (10% fee)",
+					np = t.np || "Net Profit (after 10% fee & costs)";
 					coins = t.coins || "Coins",
+					trc = t.trc || "Total Resources Cost",
+					tpc = t.tpc || "Total Production Cost",
 					tcc = t.tcc || "Total Craft Cost",
 					dsp = t.dsp || "Desired Selling Price (Market)",
 					eg = t.eg || "e.g.";
@@ -219,12 +228,12 @@ async function initItemPage() {
 						resourceItems = resourceCategoryKey ? data[resourceCategoryKey] : [],
 						resourceCounts = {};
 					resourceItems.forEach(res => {
-						const count = countItemInCraftTree(item.id, res.id, data);
-						if (count > 0) {
-							resourceCounts[res.id] = count;
-						}
+						const resResult = countItemInCraftTree(item.id, res.id, data);
+						if (resResult.count > 0) resourceCounts[res.id] = resResult.count;
 					});
 					let tTotalsHTML = '', marketInputsHTML = '', totalCoinCost = 0;
+					const treeCostResult = countItemInCraftTree(item.id, "non_existent_target", data);
+					totalCoinCost += treeCostResult.cost;
 					const marketPrices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {};
 					for (const [resId, count] of Object.entries(resourceCounts)) {
 						const resData = resourceItems.find(r => r.id === resId), resName = resData ? resData.name : resId;
@@ -250,11 +259,17 @@ async function initItemPage() {
 					<div class="market-inputs-grid">
 					${marketInputsHTML}
 					</div>
-					<div class="market-total-box"><des><b>${tcc}:</b> <span id="totalCostDisplay" class="market-total-value">${totalCoinCost.toFixed(2)}</span> ${coins}</des></div>
+					<div class="market-total-box">
+						<des><b>${trc}:</b> <span id="totalResDisplay" class="market-total-value">${(totalCoinCost - treeCostResult.cost).toFixed(2)}</span> ${coins}</des>
+						<des><b>${tpc}:</b> <span id="totalProdDisplay" class="market-total-value">${treeCostResult.cost.toFixed(2)}</span> ${coins}</des>
+						<des><b>${tcc}:</b> <span id="totalCostDisplay" class="market-total-value">${totalCoinCost.toFixed(2)}</span> ${coins}</des>
+					</div>
 					<div class="market-field">
 					<label>${dsp}:</label>
 					<input type="number" id="sellPriceInput" class="market-sell-input" placeholder="${eg} 250">
-					<div class="market-profit-box"><des><b>${atax}:</b> <span id="netProfitDisplay" class="market-profit-value">0.00</span> ${coins}</des></div>
+					<div class="market-profit-box">
+						<des><b>${atax}:</b> <span id="afterTaxDisplay" class="market-profit-value">0.00</span> ${coins}</des>
+						<des><b>${np}:</b> <span id="netProfitDisplay" class="market-profit-value">0.00</span> ${coins}</des>
 					</div>
 					</div>
 					`;
@@ -287,33 +302,60 @@ document.addEventListener('input', (e) => {
 		updateLiveCraftCost();
 	}
 	if (e.target.id === 'sellPriceInput') {
-		const sellPrice = parseFloat(e.target.value) || 0;
-		const tax = sellPrice * 0.10;
-		const netProfit = sellPrice - tax;
-		const profitDisplay = document.getElementById('netProfitDisplay');
+		const sellPrice = parseFloat(e.target.value) || 0,
+			tax = sellPrice * 0.10,
+			netRevenue = sellPrice - tax,
+			totalCostElement = document.getElementById('totalCostDisplay'),
+			totalCost = totalCostElement ? parseFloat(totalCostElement.textContent) || 0 : 0,
+			netProfit = netRevenue - totalCost,
+			ataxDisplay = document.getElementById('afterTaxDisplay'),
+			profitDisplay = document.getElementById('netProfitDisplay');
+		if (ataxDisplay) {
+			ataxDisplay.textContent = netRevenue.toFixed(2);
+			ataxDisplay.style.color = netRevenue > 0 ? '#42c2b6' : '#ff5100';
+		}
 		if (profitDisplay) {
 			profitDisplay.textContent = netProfit.toFixed(2);
-			profitDisplay.style.color = netProfit > 0 ? '#42c2b6' : '#ff5100';
+			profitDisplay.style.color = netProfit > 0 ? '#4fc242' : '#ff5100';
 		}
 	}
 });
 function updateLiveCraftCost() {
 	const prices = JSON.parse(localStorage.getItem('crosscalc_prices')) || {};
-	let totalCost = 0;
-	const craftSection = document.querySelector('.craft-section');
-	if (!craftSection) return;
-	craftSection.querySelectorAll('des[data-res]').forEach(el => {
-		const resId = el.getAttribute('data-res');
-		const price = prices[resId] || 0;
-		const text = el.textContent;
-		const parts = text.split(':');
-		if (parts.length > 1) {
-			const amount = parseFloat(parts[1].trim()) || 0;
-			totalCost += (amount / 1000) * (price || 0);
+	let resourceTotalCost = 0;
+	const urlParams = new URLSearchParams(window.location.search), itemId = urlParams.get('id');
+	if (!itemId) return;
+	fetch(databaseFile).then(res => res.json()).then(data => {
+		let item = null;
+		for (const cat in data) {
+			const match = data[cat].find(i => i.id === itemId);
+			if (match) { item = match; break; }
 		}
+		let productionCost = 0;
+		if (item) productionCost = countItemInCraftTree(item.id, "non_existent_target", data).cost;
+		const craftSection = document.querySelector('.craft-section');
+		if (craftSection) {
+			craftSection.querySelectorAll('des[data-res]').forEach(el => {
+				const resId = el.getAttribute('data-res');
+				const price = prices[resId] || 0;
+				const text = el.textContent;
+				const parts = text.split(':');
+				if (parts.length > 1) {
+					const amount = parseFloat(parts[1].trim()) || 0;
+					resourceTotalCost += (amount / 1000) * (price || 0);
+				}
+			});
+		}
+		const totalCost = resourceTotalCost + productionCost,
+		resDisplay = document.getElementById('totalResDisplay');
+		if (resDisplay) resDisplay.textContent = resourceTotalCost.toFixed(2);
+		const prodDisplay = document.getElementById('totalProdDisplay');
+		if (prodDisplay) prodDisplay.textContent = productionCost.toFixed(2);
+		const totalDisplay = document.getElementById('totalCostDisplay');
+		if (totalDisplay) totalDisplay.textContent = totalCost.toFixed(2);
+		const sellPriceInput = document.getElementById('sellPriceInput');
+		if (sellPriceInput && sellPriceInput.value) sellPriceInput.dispatchEvent(new Event('input', { bubbles: true }));
 	});
-	const costDisplay = document.getElementById('totalCostDisplay');
-	if (costDisplay) costDisplay.textContent = totalCost.toFixed(2);
 }
 document.addEventListener('DOMContentLoaded', () => {
 	if (document.getElementById('itemsContainer')) initIndexPage();

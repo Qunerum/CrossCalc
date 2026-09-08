@@ -19,7 +19,10 @@
 		"eg": "np.",
 		"market": "Kalkulator rynku i zysków",
 		"atax": "Po opodatkowaniu (opłata 10%)",
+		"np": "Zysk (po prowizji 10% i kosztów)",
 		"coins": "Monet",
+		"trc": "Całkowity koszt surowców",
+		"tpc": "Całkowity koszt produkcji",
 		"tcc": "Całkowity koszt",
 		"dsp": "Pożądana cena sprzedaży (rynkowa)"
 	},
@@ -43,7 +46,10 @@
 		"eg": "e.g.",
 		"market": "Market & Profit Calculator",
 		"atax": "After Tax (10% fee)",
+		"np": "Net Profit (after 10% fee & costs)",
 		"coins": "Coins",
+		"trc": "Total Resources Cost",
+		"tpc": "Total Production Cost",
 		"tcc": "Total Craft Cost",
 		"dsp": "Desired Selling Price (Market)"
 	}
