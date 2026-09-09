@@ -1,10 +1,10 @@
 , {
-			"faction": 3,
+			"faction": 7,
 			"rare": 4,
 			"type": "",
 			"name": "",
 			"id": "",
-			"cost": 0,
+			"cost": 15,
 			"ps": 0,
 			"energy": -8,
 			"durability": 0,
@@ -12,11 +12,36 @@
 			"craft_count": 1,
 			"craft": [
 				{ "id": "scrap", "amount": 100 },
-				{ "id": "wires", "amount": 100 },
-				{ "id": "copper", "amount": 100 },
-				{ "id": "electronics", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
 				{ "id": "plastic", "amount": 100 },
-				{ "id": "batteries", "amount": 100 },
+
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 }
+			]
+		}
+
+
+
+, {
+			"faction": 7,
+			"rare": 5,
+			"type": "",
+			"name": "",
+			"id": "",
+			"cost": 75,
+			"ps": 0,
+			"energy": -1,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
 
 				{ "id": "", "amount": 1 },
 				{ "id": "", "amount": 1 },

@@ -1560,6 +1560,486 @@
 				{ "id": "hermes", "amount": 2 },
 				{ "id": "hardened_track", "amount": 2 }
 			]
+		}, {
+			"faction": 5,
+			"rare": 3,
+			"type": "Autonomous weapon",
+			"name": "Sidekick",
+			"id": "sidekick",
+			"cost": 6,
+			"ps": 760,
+			"energy": -8,
+			"durability": 141,
+			"mass": 256,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "dt_cobra", "amount": 1 },
+				{ "id": "borer", "amount": 1 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 4,
+			"type": "Machine gun",
+			"name": "Caucasus",
+			"id": "caucasus",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 284,
+			"mass": 743,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "prosecutor_76mm", "amount": 1 },
+				{ "id": "jawbreaker", "amount": 1 },
+				{ "id": "apc_wheel", "amount": 2 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 4,
+			"type": "Rocket launcher",
+			"name": "Clarinet TOW",
+			"id": "clarinet_tow",
+			"cost": 15,
+			"ps": 2700,
+			"energy": -20,
+			"durability": 172,
+			"mass": 270,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "dt_python", "amount": 1 },
+				{ "id": "sidekick", "amount": 1 },
+				{ "id": "apc_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 5,
+			"type": "Flame weapon",
+			"name": "Mandrake",
+			"id": "mandrake",
+			"cost": 75,
+			"ps": 2600,
+			"energy": -13,
+			"durability": 918,
+			"mass": 2430,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "humpback", "amount": 2 },
+				{ "id": "executioner_88mm", "amount": 2 },
+				{ "id": "skinner", "amount": 1 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 5,
+			"type": "Autocannon",
+			"name": "Cyclone",
+			"id": "cyclone",
+			"cost": 75,
+			"ps": 2000,
+			"energy": -10,
+			"durability": 714,
+			"mass": 729,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "caucasus", "amount": 2 },
+				{ "id": "oppressor", "amount": 2 },
+				{ "id": "hardened_track", "amount": 2 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 5,
+			"type": "Cannon",
+			"name": "BC-17 Tsunami",
+			"id": "bc17_tsunami",
+			"cost": 75,
+			"ps": 2400,
+			"energy": -12,
+			"durability": 903,
+			"mass": 1850,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "clarinet_tow", "amount": 2 },
+				{ "id": "icarus_vii", "amount": 2 },
+				{ "id": "harpy", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 3,
+			"type": "Energy weapon",
+			"name": "Synthesis",
+			"id": "synthesis",
+			"cost": 6,
+			"ps": 760,
+			"energy": -8,
+			"durability": 201,
+			"mass": 158,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "vector", "amount": 1 },
+				{ "id": "wyvern", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Energy weapon",
+			"name": "Quasar",
+			"id": "quasar",
+			"cost": 15,
+			"ps": 1620,
+			"energy": -12,
+			"durability": 578,
+			"mass": 792,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "zs33_hulk", "amount": 1 },
+				{ "id": "synthesis", "amount": 1 },
+				{ "id": "genesis", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Energy weapon",
+			"name": "Prometheus V",
+			"id": "prometheus_v",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 265,
+			"mass": 200,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "synthesis", "amount": 1 },
+				{ "id": "genesis", "amount": 1 },
+				{ "id": "maxwell", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Energy weapon",
+			"name": "Aurora",
+			"id": "aurora",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 303,
+			"mass": 315,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "synthesis", "amount": 1 },
+				{ "id": "lunar_iv_st", "amount": 2 },
+				{ "id": "ampere", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Autonomous weapon",
+			"name": "Barrier IX",
+			"id": "barrier_ix",
+			"cost": 15,
+			"ps": 405,
+			"energy": -3,
+			"durability": 161,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "pilgrim", "amount": 1 },
+				{ "id": "lunar_iv", "amount": 2 },
+				{ "id": "dt_python", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 5,
+			"type": "Energy weapon",
+			"name": "Spark III",
+			"id": "spark_iii",
+			"cost": 75,
+			"ps": 1200,
+			"energy": -6,
+			"durability": 457,
+			"mass": 360,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "aurora", "amount": 2 },
+				{ "id": "shiver", "amount": 2 },
+				{ "id": "phoenix", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 5,
+			"type": "Energy weapon",
+			"name": "Helios",
+			"id": "helios",
+			"cost": 75,
+			"ps": 1600,
+			"energy": -8,
+			"durability": 350,
+			"mass": 250,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "prometheus_v", "amount": 2 },
+				{ "id": "tormentor", "amount": 2 },
+				{ "id": "ml_200", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 5,
+			"type": "Energy weapon",
+			"name": "Pulsar",
+			"id": "pulsar",
+			"cost": 75,
+			"ps": 2400,
+			"energy": -12,
+			"durability": 748,
+			"mass": 950,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "quasar", "amount": 2 },
+				{ "id": "m29_protector", "amount": 2 },
+				{ "id": "phoenix", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 3,
+			"type": "Shotgun",
+			"name": "Junkbow",
+			"id": "junkbow",
+			"cost": 6,
+			"ps": 760,
+			"energy": -8,
+			"durability": 314,
+			"mass": 189,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "sledgehammer", "amount": 1 },
+				{ "id": "growl", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Crossbow",
+			"name": "Phoenix",
+			"id": "phoenix",
+			"cost": 15,
+			"ps": 1350,
+			"energy": -10,
+			"durability": 537,
+			"mass": 759,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "junkbow", "amount": 1 },
+				{ "id": "shiv", "amount": 2 },
+				{ "id": "boom", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Shotgun",
+			"name": "Fafnir",
+			"id": "fafnir",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 400,
+			"mass": 255,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "junkbow", "amount": 2 },
+				{ "id": "zs33_hulk", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Flame weapon",
+			"name": "Incinerator",
+			"id": "incinerator",
+			"cost": 15,
+			"ps": 1620,
+			"energy": -12,
+			"durability": 472,
+			"mass": 540,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "shiv", "amount": 2 },
+				{ "id": "junkbow", "amount": 1 },
+				{ "id": "pu1_charge", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Uncategorized weapon",
+			"name": "Skinner",
+			"id": "skinner",
+			"cost": 15,
+			"ps": 540,
+			"energy": -4,
+			"durability": 308,
+			"mass": 378,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "junkbow", "amount": 1 },
+				{ "id": "shiv_st", "amount": 2 },
+				{ "id": "mace", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 5,
+			"type": "Flame weapon",
+			"name": "Draco",
+			"id": "draco",
+			"cost": 75,
+			"ps": 1600,
+			"energy": -8,
+			"durability": 396,
+			"mass": 270,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "werewolf", "amount": 2 },
+				{ "id": "fuze", "amount": 2 },
+				{ "id": "photon", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 5,
+			"type": "Shotgun",
+			"name": "Nidhogg",
+			"id": "nidhogg",
+			"cost": 75,
+			"ps": 1600,
+			"energy": -8,
+			"durability": 464,
+			"mass": 290,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "fafnir", "amount": 2 },
+				{ "id": "cricket", "amount": 2 },
+				{ "id": "bastion", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 5,
+			"type": "Minelayer",
+			"name": "Fortune",
+			"id": "fortune",
+			"cost": 75,
+			"ps": 2000,
+			"energy": -10,
+			"durability": 331,
+			"mass": 360,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "incinerator", "amount": 2 },
+				{ "id": "neutrino", "amount": 2 },
+				{ "id": "rn_seal", "amount": 1 }
+			]
 		}
 	],
 
