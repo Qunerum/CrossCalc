@@ -1199,6 +1199,367 @@
 				{ "id": "sinus0", "amount": 1 },
 				{ "id": "ampere", "amount": 1 }
 			]
+		}, {
+			"faction": 3,
+			"rare": 5,
+			"type": "Grenade launcher",
+			"name": "Retcher",
+			"id": "retcher",
+			"cost": 75,
+			"ps": 2400,
+			"energy": -12,
+			"durability": 343,
+			"mass": 315,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "md3_owl", "amount": 2 },
+				{ "id": "gl55_impulse", "amount": 2 },
+				{ "id": "lancelot", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 5,
+			"type": "Machine gun",
+			"name": "Aspect",
+			"id": "aspect",
+			"cost": 75,
+			"ps": 1600,
+			"energy": -8,
+			"durability": 350,
+			"mass": 307,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "spectre2", "amount": 2 },
+				{ "id": "small_track", "amount": 4 },
+				{ "id": "rd2_keen", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 5,
+			"type": "Machine gun",
+			"name": "MG14 Arbiter",
+			"id": "mg14_arbiter",
+			"cost": 75,
+			"ps": 1200,
+			"energy": -6,
+			"durability": 360,
+			"mass": 375,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "mg13_equalizer", "amount": 2 },
+				{ "id": "rt_anaconda", "amount": 2 },
+				{ "id": "gasgen", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 5,
+			"type": "Machine gun",
+			"name": "Reaper",
+			"id": "reapoer",
+			"cost": 75,
+			"ps": 2400,
+			"energy": -12,
+			"durability": 566,
+			"mass": 656,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "ac72_whirlwind", "amount": 2 },
+				{ "id": "hot_red", "amount": 2 },
+				{ "id": "armored_track", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Cannon",
+			"name": "Judge 76mm",
+			"id": "judge_76mm",
+			"cost": 3,
+			"ps": 650,
+			"energy": -10,
+			"durability": 352,
+			"mass": 585,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "avenger_57mm", "amount": 1 },
+				{ "id": "medium_wheel_st", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Melee weapon",
+			"name": "Borer",
+			"id": "borer",
+			"cost": 3,
+			"ps": 325,
+			"energy": -5,
+			"durability": 231,
+			"mass": 250,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "car_jack", "amount": 1 },
+				{ "id": "r1_breeze", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Autonomous weapon",
+			"name": "DT Cobra",
+			"id": "dt_cobra",
+			"cost": 3,
+			"ps": 390,
+			"energy": -6,
+			"durability": 126,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "copper", "amount": 750 },
+
+				{ "id": "radio", "amount": 1 },
+				{ "id": "lupara", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Cannon",
+			"name": "ZS-33 Hulk",
+			"id": "zs33_hulk",
+			"cost": 6,
+			"ps": 1140,
+			"energy": -12,
+			"durability": 583,
+			"mass": 850,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "judge_76mm", "amount": 1 },
+				{ "id": "fuel_tank", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Cannon",
+			"name": "Prosecutor 76mm",
+			"id": "prosecutor_76mm",
+			"cost": 6,
+			"ps": 950,
+			"energy": -10,
+			"durability": 440,
+			"mass": 670,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "judge_76mm", "amount": 1 },
+				{ "id": "ammo_reserve", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Autonomous",
+			"name": "DT Python",
+			"id": "dt_python",
+			"cost": 6,
+			"ps": 570,
+			"energy": -6,
+			"durability": 141,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "dt_cobra", "amount": 1 },
+				{ "id": "r2_chill", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Cannon",
+			"name": "ZS-34 Fat Man",
+			"id": "zs34_fat_man",
+			"cost": 15,
+			"ps": 1620,
+			"energy": -12,
+			"durability": 830,
+			"mass": 1215,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "zs33_hulk", "amount": 2 },
+				{ "id": "twin_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Cannon",
+			"name": "Executioner 88mm",
+			"id": "executioner_88mm",
+			"cost": 15,
+			"ps": 1350,
+			"energy": -10,
+			"durability": 655,
+			"mass": 864,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "prosecutor_76mm", "amount": 1 },
+				{ "id": "twin_wheel", "amount": 2 },
+				{ "id": "oculus_vi", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Grenade launcher",
+			"name": "GL-55 Impulse",
+			"id": "gl55_impulse",
+			"cost": 15,
+			"ps": 1350,
+			"energy": -10,
+			"durability": 171,
+			"mass": 198,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "prosecutor_76mm", "amount": 1 },
+				{ "id": "pu1_charge", "amount": 1 },
+				{ "id": "dt_python", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Autonomous weapon",
+			"name": "RT Anaconda",
+			"id": "rt_anaconda",
+			"cost": 15,
+			"ps": 1080,
+			"energy": -8,
+			"durability": 321,
+			"mass": 256,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "dt_python", "amount": 1 },
+				{ "id": "pu1_charge", "amount": 1 },
+				{ "id": "twin_wheel_st ", "amount": 2 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Rocket launcher",
+			"name": "Pyre",
+			"id": "pyre",
+			"cost": 15,
+			"ps": 540,
+			"energy": -4,
+			"durability": 60,
+			"mass": 93,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "prosecutor_76mm", "amount": 1 },
+				{ "id": "oculus_vi", "amount": 1 },
+				{ "id": "dt_python", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 5,
+			"type": "Rocket launcher",
+			"name": "Hurricane",
+			"id": "hurricane",
+			"cost": 75,
+			"ps": 2400,
+			"energy": -12,
+			"durability": 201,
+			"mass": 331,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "pyre", "amount": 2 },
+				{ "id": "doppler", "amount": 2 },
+				{ "id": "lancelot", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 5,
+			"type": "Cannon",
+			"name": "ZS-46 Mammoth",
+			"id": "zs46_mammoth",
+			"cost": 75,
+			"ps": 2400,
+			"energy": -12,
+			"durability": 1477,
+			"mass": 2633,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "zs34_fat_man", "amount": 2 },
+				{ "id": "hermes", "amount": 2 },
+				{ "id": "hardened_track", "amount": 2 }
+			]
 		}
 	],
 

@@ -105,13 +105,19 @@ function displayItems(items) {
 		container.innerHTML = `<p>${noItemsText}</p>`;
 		return;
 	}
+	const categoryCounts = {};
+	items.forEach(item => {
+		const cat = item.category || 'other';
+		categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+	});
 	let lastCategory = null;
 	items.forEach(item => {
 		if (item.category && item.category !== lastCategory) {
 			lastCategory = item.category;
-			const separator = document.createElement('div');
+			const count = categoryCounts[lastCategory] || 0,
+				separator = document.createElement('div');
 			separator.className = 'category-separator';
-			separator.innerHTML = `<h3>${item.category}</h3><hr>`;
+			separator.innerHTML = `<h3>${item.category} (${count})</h3><hr>`;
 			container.appendChild(separator);
 		}
 		const card = document.createElement('a');

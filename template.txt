@@ -1,0 +1,26 @@
+, {
+			"faction": 3,
+			"rare": 4,
+			"type": "",
+			"name": "",
+			"id": "",
+			"cost": 0,
+			"ps": 0,
+			"energy": -8,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "electronics", "amount": 100 },
+				{ "id": "plastic", "amount": 100 },
+				{ "id": "batteries", "amount": 100 },
+
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 }
+			]
+		}
