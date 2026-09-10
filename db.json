@@ -2352,6 +2352,624 @@
 				{ "id": "thor6s", "amount": 1 },
 				{ "id": "ac80_stillwind", "amount": 1 }
 			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Booster",
+			"name": "Blastoff",
+			"id": "blastoff",
+			"cost": 3,
+			"ps": 130,
+			"energy": -2,
+			"durability": 87,
+			"mass": 48,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "b1_aviator", "amount": 1 },
+				{ "id": "rs1_ruby", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Generator",
+			"name": "Big G",
+			"id": "big_g",
+			"cost": 3,
+			"ps": 130,
+			"energy": 2,
+			"durability": 41,
+			"mass": 72,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "b1_aviator", "amount": 1 },
+				{ "id": "avenger_57mm", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 3,
+			"type": "Engine",
+			"name": "Hardcore",
+			"id": "hardcore",
+			"cost": 6,
+			"ps": 95,
+			"energy": 0,
+			"durability": 93,
+			"mass": 50,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "blastoff", "amount": 1 },
+				{ "id": "cs_taymyr", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 4,
+			"type": "Booster",
+			"name": "Hermes",
+			"id": "hermes",
+			"cost": 15,
+			"ps": 405,
+			"energy": -3,
+			"durability": 216,
+			"mass": 108,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "hardcore", "amount": 1 },
+				{ "id": "boom", "amount": 1 },
+				{ "id": "buzzsaw", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 4,
+			"type": "Engine",
+			"name": "Hot red",
+			"id": "hot_red",
+			"cost": 15,
+			"ps": 135,
+			"energy": 0,
+			"durability": 145,
+			"mass": 90,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "hardcore", "amount": 1 },
+				{ "id": "goblin", "amount": 1 },
+				{ "id": "mace", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 4,
+			"type": "Cooler",
+			"name": "Shiver",
+			"id": "shiver",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 115,
+			"mass": 96,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "buzzsaw", "amount": 1 },
+				{ "id": "mace", "amount": 1 },
+				{ "id": "hardcore", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 4,
+			"type": "Generator",
+			"name": "Gasgen",
+			"id": "gasgen",
+			"cost": 15,
+			"ps": 810,
+			"energy": 0,
+			"durability": 105,
+			"mass": 144,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "buzzsaw", "amount": 1 },
+				{ "id": "goblin", "amount": 1 },
+				{ "id": "boom", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 3,
+			"type": "Engine",
+			"name": "Dun horse",
+			"id": "dun_horse",
+			"cost": 6,
+			"ps": 95,
+			"energy": -1,
+			"durability": 127,
+			"mass": 80,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "racing_wheel", "amount": 2 },
+				{ "id": "r2_chill", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 3,
+			"type": "Radar",
+			"name": "Maxwell",
+			"id": "maxwell",
+			"cost": 6,
+			"ps": 190,
+			"energy": -2,
+			"durability": 327,
+			"mass": 288,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "landing_gear_st", "amount": 2 },
+				{ "id": "ts1_horizon", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 3,
+			"type": "Generator",
+			"name": "Ampere",
+			"id": "ampere",
+			"cost": 6,
+			"ps": 380,
+			"energy": 0,
+			"durability": 65,
+			"mass": 108,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "racing_wheel_st", "amount": 2 },
+				{ "id": "r2_chill", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 3,
+			"type": "Stealth",
+			"name": "Chameleon",
+			"id": "chameleon",
+			"cost": 6,
+			"ps": 190,
+			"energy": -2,
+			"durability": 68,
+			"mass": 48,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "Landing_gear", "amount": 2 },
+				{ "id": "cs_taymyr", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Engine",
+			"name": "Cheetah",
+			"id": "cheetah",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 223,
+			"mass": 150,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "dun_horse", "amount": 1 },
+				{ "id": "chameleon", "amount": 1 },
+				{ "id": "ac50_storm", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Radiator",
+			"name": "RN Seal",
+			"id": "rn_seal",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 77,
+			"mass": 64,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "ampere", "amount": 1 },
+				{ "id": "maxwell", "amount": 1 },
+				{ "id": "dun_horse", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Radar",
+			"name": "Doppler",
+			"id": "doppler",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 431,
+			"mass": 384,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "maxwell", "amount": 2 },
+				{ "id": "chameleon", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Stealth",
+			"name": "Chameleon Mk2",
+			"id": "chameleon_mk2",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 84,
+			"mass": 60,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "chameleon", "amount": 1 },
+				{ "id": "maxwell", "amount": 1 },
+				{ "id": "ac50_storm", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Radar",
+			"name": "RD-1 Listener",
+			"id": "rd1_listener",
+			"cost": 3,
+			"ps": 65,
+			"energy": 0,
+			"durability": 104,
+			"mass": 126,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "rs1_ruby", "amount": 1 },
+				{ "id": "fuel_barrel", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Engine",
+			"name": "Razorback",
+			"id": "razorback",
+			"cost": 6,
+			"ps": 95,
+			"energy": -1,
+			"durability": 370,
+			"mass": 400,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "trucker", "amount": 1 },
+				{ "id": "little_boy_6lb", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Generator",
+			"name": "PU-1 Charge",
+			"id": "pu1_charge",
+			"cost": 6,
+			"ps": 475,
+			"energy": 0,
+			"durability": 164,
+			"mass": 576,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "dt_cobra", "amount": 1 },
+				{ "id": "fg_aggregator", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Radar",
+			"name": "Oculus VI",
+			"id": "oculus_vi",
+			"cost": 6,
+			"ps": 95,
+			"energy": -1,
+			"durability": 174,
+			"mass": 110,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "rd1_listener", "amount": 1 },
+				{ "id": "ts1_horizon", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Engine",
+			"name": "Colossus",
+			"id": "colossus",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 415,
+			"mass": 450,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "razorback", "amount": 1 },
+				{ "id": "twin_wheel", "amount": 2 },
+				{ "id": "zs33_hulk", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Ammunition",
+			"name": "Ammo rack",
+			"id": "ammo_rack",
+			"cost": 15,
+			"ps": 216,
+			"energy": 0,
+			"durability": 264,
+			"mass": 408,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "oculus_vi", "amount": 1 },
+				{ "id": "pu1_charge", "amount": 1 },
+				{ "id": "prosecutor_76mm", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Radar",
+			"name": "RD-2 Keen",
+			"id": "rd2_keen",
+			"cost": 15,
+			"ps": 135,
+			"energy": 0,
+			"durability": 202,
+			"mass": 180,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "oculus_vi", "amount": 1 },
+				{ "id": "twin_wheel", "amount": 2 },
+				{ "id": "pu1_charge", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Ammunition",
+			"name": "Ammo supply",
+			"id": "ammo_supply",
+			"cost": 6,
+			"ps": 166,
+			"energy": 0,
+			"durability": 180,
+			"mass": 252,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "ammo_reserve", "amount": 1 },
+				{ "id": "judge_76mm", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Ammunition",
+			"name": "Genesis",
+			"id": "genesis",
+			"cost": 6,
+			"ps": 157,
+			"energy": 0,
+			"durability": 86,
+			"mass": 80,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "ad12_falcon", "amount": 1 },
+				{ "id": "ammo_reserve", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Visor",
+			"name": "Neutrino",
+			"id": "neutrino",
+			"cost": 15,
+			"ps": 270,
+			"energy": 0,
+			"durability": 135,
+			"mass": 90,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "lunar_iv", "amount": 2 },
+				{ "id": "genesis", "amount": 1 },
+				{ "id": "twin_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 5,
+			"type": "Special module",
+			"name": "Aegis-Prime",
+			"id": "aegisprime",
+			"cost": 75,
+			"ps": 800,
+			"energy": -4,
+			"durability": 112,
+			"mass": 80,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "barrier_ix", "amount": 2 },
+				{ "id": "chameleon_mk2", "amount": 2 },
+				{ "id": "meat_grinder", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 5,
+			"type": "Generator",
+			"name": "Apollo IV",
+			"id": "apollo_iv",
+			"cost": 75,
+			"ps": 1800,
+			"energy": 0,
+			"durability": 515,
+			"mass": 1152,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "quantum", "amount": 2 },
+				{ "id": "bigfoot_st", "amount": 4 },
+				{ "id": "gasgen", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Special module",
+			"name": "Tormentor",
+			"id": "tormentor",
+			"cost": 15,
+			"ps": 540,
+			"energy": -4,
+			"durability": 153,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "bat", "amount": 1 },
+				{ "id": "junkbow", "amount": 1 },
+				{ "id": "ad13_hawk", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Engine",
+			"name": "Oppressor",
+			"id": "oppressor",
+			"cost": 15,
+			"ps": 270,
+			"energy": -2,
+			"durability": 425,
+			"mass": 500,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "bat", "amount": 1 },
+				{ "id": "shiv_st", "amount": 2 },
+				{ "id": "hardcore", "amount": 1 }
+			]
 		}
 	],
 

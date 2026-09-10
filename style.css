@@ -81,7 +81,7 @@ body {
 	border: 1px solid #333;
 	border-left: 6px solid var(--rare);
 	border-radius: 8px;
-	width: 200px;
+	width: 210px;
 	height: 92px;
 	display: flex;
 	flex-direction: column;
