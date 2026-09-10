@@ -2045,6 +2045,318 @@
 
 
 
+	"hardware": [
+		{
+			"faction": 1,
+			"rare": 1,
+			"type": "Special module",
+			"name": "Car jack",
+			"id": "car_jack",
+			"cost": 0,
+			"ps": 40,
+			"energy": 0,
+			"durability": 112,
+			"mass": 160,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 20 },
+				{ "id": "copper", "amount": 4 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Generator",
+			"name": "Toughie",
+			"id": "toughie",
+			"cost": 0,
+			"ps": 40,
+			"energy": 1,
+			"durability": 67,
+			"mass": 231,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 70 },
+				{ "id": "copper", "amount": 14 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Special module",
+			"name": "Radio",
+			"id": "radio",
+			"cost": 0,
+			"ps": 40,
+			"energy": 0,
+			"durability": 42,
+			"mass": 36,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 20 },
+				{ "id": "copper", "amount": 4 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Radiator",
+			"name": "R-1 Breeze",
+			"id": "r1_breeze",
+			"cost": 0,
+			"ps": 40,
+			"energy": -1,
+			"durability": 45,
+			"mass": 64,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 20 },
+				{ "id": "copper", "amount": 4 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Radar",
+			"name": "RS-1 Ruby",
+			"id": "rs1_ruby",
+			"cost": 0,
+			"ps": 40,
+			"energy": 0,
+			"durability": 56,
+			"mass": 72,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 35 },
+				{ "id": "copper", "amount": 8 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Special module",
+			"name": "Fuel barrel",
+			"id": "fuel_barrel",
+			"cost": 0,
+			"ps": 40,
+			"energy": 0,
+			"durability": 56,
+			"mass": 80,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 60 },
+				{ "id": "copper", "amount": 12 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Booster",
+			"name": "B-1 Aviator",
+			"id": "b1_aviator",
+			"cost": 0,
+			"ps": 40,
+			"energy": -1,
+			"durability": 51,
+			"mass": 32,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 55 },
+				{ "id": "copper", "amount": 11 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Generator",
+			"name": "FG Aggregator",
+			"id": "fg_aggregator",
+			"cost": 3,
+			"ps": 195,
+			"energy": 3,
+			"durability": 101,
+			"mass": 346,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "toughie", "amount": 1 },
+				{ "id": "lupara", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Radiator",
+			"name": "R-2 Chill",
+			"id": "r2_chill",
+			"cost": 3,
+			"ps": 65,
+			"energy": -1,
+			"durability": 126,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "r1_breeze", "amount": 1 },
+				{ "id": "radio", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Cooler",
+			"name": "CS Taymyr",
+			"id": "cs_taymyr",
+			"cost": 3,
+			"ps": 65,
+			"energy": -1,
+			"durability": 63,
+			"mass": 64,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "r1_breeze", "amount": 1 },
+				{ "id": "huntsman", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Visor",
+			"name": "TS-1 Horizon",
+			"id": "ts1_horizon",
+			"cost": 3,
+			"ps": 65,
+			"energy": 0,
+			"durability": 118,
+			"mass": 90,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "radio", "amount": 1 },
+				{ "id": "small_wheel", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Ammunition",
+			"name": "Ammo reserve",
+			"id": "ammo_reserve",
+			"cost": 3,
+			"ps": 115,
+			"energy": 0,
+			"durability": 95,
+			"mass": 96,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "car_jack", "amount": 1 },
+				{ "id": "radio", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Special module",
+			"name": "Fuel tank",
+			"id": "fuel_tank",
+			"cost": 3,
+			"ps": 65,
+			"energy": 0,
+			"durability": 140,
+			"mass": 200,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "fuel_barrel", "amount": 1 },
+				{ "id": "docker", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Special module",
+			"name": "Rift 2M",
+			"id": "rift_2m",
+			"cost": 3,
+			"ps": 65,
+			"energy": 0,
+			"durability": 15,
+			"mass": 35,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "b1_aviator", "amount": 1 },
+				{ "id": "docker", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Special module",
+			"name": "Contact 2M",
+			"id": "contact_2m",
+			"cost": 3,
+			"ps": 65,
+			"energy": 0,
+			"durability": 90,
+			"mass": 100,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "lm54_chord", "amount": 1 },
+				{ "id": "sprinter", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 6,
+			"type": "Generator",
+			"name": "Thanatos",
+			"id": "thanatos",
+			"cost": 0,
+			"ps": 3300,
+			"energy": 11,
+			"durability": 1267,
+			"mass": 2574,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "electronics", "amount": 500 },
+				{ "id": "copper", "amount": 500 },
+				{ "id": "uranium_ore", "amount": 200 },
+				{ "id": "batteries", "amount": 500 },
+
+				{ "id": "apollo_iv", "amount": 1 },
+				{ "id": "aquilo", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 6,
+			"type": "Generator",
+			"name": "Odin",
+			"id": "odin",
+			"cost": 0,
+			"ps": 3000,
+			"energy": 10,
+			"durability": 367,
+			"mass": 715,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "electronics", "amount": 500 },
+				{ "id": "copper", "amount": 500 },
+				{ "id": "uranium_ore", "amount": 200 },
+				{ "id": "batteries", "amount": 500 },
+
+				{ "id": "thor6s", "amount": 1 },
+				{ "id": "ac80_stillwind", "amount": 1 }
+			]
+		}
+	],
+
+
+
 	"resources": [
 		{
 			"faction": 0,

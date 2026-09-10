@@ -46,12 +46,13 @@ const rares = [
 	"Firestarters"
 ];
 // index.html
-let rareFilter = [false, false, false, false, false, false, false];
+let rareFilter = [false, false, false, false, false, false, false], collapsedCategories = {};
 function addBtn(container, id) {
 	const btn = document.createElement('button');
 	btn.className = 'rare-btn';
 	if (rareFilter[id]) btn.setAttribute('on', '');
-	btn.innerHTML = `<div class="rare-box" style="background-color: #${rares[id]};"></div>`;
+	btn.style.setProperty('--rareb', `#${rares[id]}`);
+	btn.innerHTML = `<div class="rare-box"></div>`;
 	btn.onclick = () => filterByRare(id, btn);
 	container.appendChild(btn);
 }
@@ -115,10 +116,21 @@ function displayItems(items) {
 		if (item.category && item.category !== lastCategory) {
 			lastCategory = item.category;
 			const count = categoryCounts[lastCategory] || 0,
+				isCollapsed = collapsedCategories[lastCategory] || false,
 				separator = document.createElement('div');
-			separator.className = 'category-separator';
-			separator.innerHTML = `<h3>${item.category} (${count})</h3><hr>`;
+			separator.className = `category-separator${isCollapsed ? ' collapsed' : ''}`;
+			separator.innerHTML = `<h3><span>${item.category} (${count})</span> <span class="collapse-arrow">▼</span></h3><hr>`;
+			const wrapper = document.createElement('div');
+			wrapper.className = 'category-collapse-wrapper';
+			if (isCollapsed) wrapper.setAttribute('collapsed', '');
+			separator.onclick = () => {
+				collapsedCategories[lastCategory] = !collapsedCategories[lastCategory];
+				separator.classList.toggle('collapsed');
+				wrapper.toggleAttribute('collapsed');
+			};
 			container.appendChild(separator);
+			container.appendChild(wrapper);
+			window._currentCardsGrid = wrapper;
 		}
 		const card = document.createElement('a');
 		card.className = 'card';
@@ -132,7 +144,7 @@ function displayItems(items) {
 		<sdes>${item.type}</sdes>
 		<sdes>${item.ps} PS</sdes>
 		`;
-		container.appendChild(card);
+		if (window._currentCardsGrid) window._currentCardsGrid.appendChild(card);
 	});
 }
 // item.html

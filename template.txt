@@ -1,5 +1,86 @@
+rares = [
+	"9b9b9b", // Base
+	"ffffff", // Common
+	"3688ff", // Rare
+	"42c2b6", // Special
+	"b333ff", // Epic
+	"ff9a00", // Legendary
+	"ff5100"  // Relic
+], factions = [
+	"...",
+	"Engineers",
+	"Lunatics",
+	"Nomads",
+	"Scavengers",
+	"Steppenwolfs",
+	"Dawn's Children",
+	"Firestarters"
+];
+==============================
 , {
-			"faction": 7,
+			"faction": 1,
+			"rare": 1,
+			"type": "",
+			"name": "",
+			"id": "",
+			"cost": 0,
+			"ps": 0,
+			"energy": -8,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 20 },
+				{ "id": "copper", "amount": 4 }
+			]
+		}
+==============================
+, {
+			"faction": 1,
+			"rare": 2,
+			"type": "",
+			"name": "",
+			"id": "",
+			"cost": 3,
+			"ps": 0,
+			"energy": -8,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 }
+			]
+		}
+==============================
+, {
+			"faction": 1,
+			"rare": 3,
+			"type": "",
+			"name": "",
+			"id": "",
+			"cost": 6,
+			"ps": 0,
+			"energy": -8,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 }
+			]
+		}
+==============================
+, {
+			"faction": 1,
 			"rare": 4,
 			"type": "",
 			"name": "",
@@ -18,15 +99,12 @@
 
 				{ "id": "", "amount": 1 },
 				{ "id": "", "amount": 1 },
-				{ "id": "", "amount": 1 },
 				{ "id": "", "amount": 1 }
 			]
 		}
-
-
-
+==============================
 , {
-			"faction": 7,
+			"faction": 1,
 			"rare": 5,
 			"type": "",
 			"name": "",
@@ -44,6 +122,30 @@
 				{ "id": "batteries", "amount": 750 },
 
 				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 },
+				{ "id": "", "amount": 1 }
+			]
+		}
+==============================
+, {
+			"faction": 1,
+			"rare": 6,
+			"type": "",
+			"name": "",
+			"id": "",
+			"cost": 0,
+			"ps": 0,
+			"energy": -8,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "electronics", "amount": 500 },
+				{ "id": "copper", "amount": 500 },
+				{ "id": "uranium_ore", "amount": 200 },
+				{ "id": "batteries", "amount": 500 },
+
 				{ "id": "", "amount": 1 },
 				{ "id": "", "amount": 1 },
 				{ "id": "", "amount": 1 }
