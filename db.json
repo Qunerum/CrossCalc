@@ -3178,6 +3178,202 @@
 				{ "id": "falco", "amount": 1 },
 				{ "id": "maxwell", "amount": 2 }
 			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Light wheel",
+			"name": "Studded wheel ST",
+			"id": "studded_wheel_st",
+			"cost": 3,
+			"ps": 60,
+			"energy": 0,
+			"durability": 100,
+			"mass": 40,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel_st", "amount": 1 },
+				{ "id": "small_wheel_st", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Light wheel",
+			"name": "Studded wheel",
+			"id": "studded_wheel",
+			"cost": 3,
+			"ps": 60,
+			"energy": 0,
+			"durability": 100,
+			"mass": 40,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel", "amount": 1 },
+				{ "id": "small_wheel", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Light wheel",
+			"name": "Chained wheel ST",
+			"id": "chained_wheel_st",
+			"cost": 3,
+			"ps": 60,
+			"energy": 0,
+			"durability": 115,
+			"mass": 50,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel_st", "amount": 1 },
+				{ "id": "small_wheel", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 2,
+			"type": "Light wheel",
+			"name": "Chained wheel",
+			"id": "chained_wheel",
+			"cost": 3,
+			"ps": 60,
+			"energy": 0,
+			"durability": 115,
+			"mass": 50,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel", "amount": 1 },
+				{ "id": "small_wheel", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 4,
+			"type": "Track",
+			"name": "Small track",
+			"id": "small_track",
+			"cost": 15,
+			"ps": 230,
+			"energy": 0,
+			"durability": 300,
+			"mass": 285,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "hardcore", "amount": 1 },
+				{ "id": "buzzsaw", "amount": 1 },
+				{ "id": "mace", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Medium wheel",
+			"name": "Landing gear ST",
+			"id": "landing_gear_st",
+			"cost": 3,
+			"ps": 70,
+			"energy": 0,
+			"durability": 130,
+			"mass": 70,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "small_wheel_st", "amount": 1 },
+				{ "id": "medium_wheel_st", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Medium wheel",
+			"name": "Landing gear",
+			"id": "landing_gear",
+			"cost": 3,
+			"ps": 70,
+			"energy": 0,
+			"durability": 130,
+			"mass": 70,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "small_wheel", "amount": 1 },
+				{ "id": "medium_wheel", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Medium wheel",
+			"name": "Racing wheel ST",
+			"id": "racing_wheel_st",
+			"cost": 3,
+			"ps": 70,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel_st", "amount": 1 },
+				{ "id": "small_wheel_st", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Medium wheel",
+			"name": "Racing wheel",
+			"id": "racing_wheel",
+			"cost": 3,
+			"ps": 70,
+			"energy": 0,
+			"durability": 0,
+			"mass": 0,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel", "amount": 1 },
+				{ "id": "small_wheel", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 4,
+			"type": "Track",
+			"name": "Hardened track",
+			"id": "hardened_track",
+			"cost": 15,
+			"ps": 300,
+			"energy": 0,
+			"durability": 600,
+			"mass": 400,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "ampere", "amount": 1 },
+				{ "id": "chameleon", "amount": 1 },
+				{ "id": "dun_horse", "amount": 1 }
+			]
 		}
 	],
 

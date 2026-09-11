@@ -18,7 +18,7 @@ rares = [
 ];
 ==============================
 , {
-			"faction": 1,
+			"faction": 2,
 			"rare": 1,
 			"type": "",
 			"name": "",
@@ -36,7 +36,7 @@ rares = [
 		}
 ==============================
 , {
-			"faction": 1,
+			"faction": 2,
 			"rare": 2,
 			"type": "",
 			"name": "",
@@ -48,7 +48,7 @@ rares = [
 			"mass": 0,
 			"craft_count": 1,
 			"craft": [
-				{ "id": "scrap", "amount": 650 },
+				{ "id": "scrap", "amount": 600 },
 				{ "id": "copper", "amount": 130 },
 
 				{ "id": "", "amount": 1 },
@@ -57,7 +57,7 @@ rares = [
 		}
 ==============================
 , {
-			"faction": 1,
+			"faction": 2,
 			"rare": 3,
 			"type": "",
 			"name": "",
@@ -80,7 +80,7 @@ rares = [
 		}
 ==============================
 , {
-			"faction": 1,
+			"faction": 2,
 			"rare": 4,
 			"type": "",
 			"name": "",
@@ -104,7 +104,7 @@ rares = [
 		}
 ==============================
 , {
-			"faction": 1,
+			"faction": 2,
 			"rare": 5,
 			"type": "",
 			"name": "",
@@ -129,7 +129,7 @@ rares = [
 		}
 ==============================
 , {
-			"faction": 1,
+			"faction": 2,
 			"rare": 6,
 			"type": "",
 			"name": "",
