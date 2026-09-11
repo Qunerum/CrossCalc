@@ -13,12 +13,12 @@ body {
 	margin-bottom: 20px;
 }
 .lang-btn {
-	width: 40px;
+	width: 40px; height: 26px;
 	background-color: #1e1e1e;
 	color: #fff;
 	border: 1px solid #333;
-	padding: 6px 12px;
 	border-radius: 4px;
+	margin-bottom: 4px;
 	text-align: center;
 	cursor: pointer;
 	transition-duration: 0.2s;
@@ -26,6 +26,7 @@ body {
 .lang-btn:hover {
 	border-color: var(--clr-btn-border);
 	box-shadow: 0 0 6px var(--clr-btn-border);
+	transform: translateY(-3px);
 }
 .rare-btn {
 	--rare: #0000;
@@ -81,7 +82,7 @@ body {
 	border: 1px solid #333;
 	border-left: 6px solid var(--rare);
 	border-radius: 8px;
-	width: 210px;
+	width: 206px;
 	height: 92px;
 	display: flex;
 	flex-direction: column;
@@ -168,6 +169,7 @@ sl { text-transform: capitalize; }
 .category-separator h3 {
 	color: #888;
 	font-size: 16px;
+	margin-top: 5px;
 	margin-bottom: 5px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -187,6 +189,7 @@ sl { text-transform: capitalize; }
 	transition: grid-template-rows 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
 	opacity: 1;
 	width: 100%;
+	padding-bottom: 8px;
 }
 .category-collapse-wrapper > div,
 .category-collapse-wrapper {
@@ -196,6 +199,7 @@ sl { text-transform: capitalize; }
 	max-height: 2000px;
 	transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
 	padding-top: 5px;
+	padding-left: 5px;
 	overflow: hidden;
 }
 .category-collapse-wrapper {
