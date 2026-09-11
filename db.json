@@ -2975,6 +2975,214 @@
 
 
 
+	"movement parts": [
+		{
+			"faction": 1,
+			"rare": 1,
+			"type": "Light wheel",
+			"name": "Small wheel ST",
+			"id": "small_wheel_st",
+			"cost": 0,
+			"ps": 40,
+			"energy": 0,
+			"durability": 65,
+			"mass": 40,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 15 },
+				{ "id": "copper", "amount": 3 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Light wheel",
+			"name": "Small wheel",
+			"id": "small_wheel",
+			"cost": 0,
+			"ps": 40,
+			"energy": 0,
+			"durability": 65,
+			"mass": 40,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 15 },
+				{ "id": "copper", "amount": 3 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Medium wheel",
+			"name": "Medium wheel ST",
+			"id": "medium_wheel_st",
+			"cost": 0,
+			"ps": 50,
+			"energy": 0,
+			"durability": 110,
+			"mass": 140,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 15 },
+				{ "id": "copper", "amount": 3 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 1,
+			"type": "Medium wheel",
+			"name": "Medium wheel",
+			"id": "medium_wheel",
+			"cost": 0,
+			"ps": 50,
+			"energy": 0,
+			"durability": 110,
+			"mass": 140,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 15 },
+				{ "id": "copper", "amount": 3 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Medium wheel",
+			"name": "Ballon tyre ST",
+			"id": "ballon_tyre_st",
+			"cost": 3,
+			"ps": 70,
+			"energy": 0,
+			"durability": 140,
+			"mass": 100,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "small_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Medium wheel",
+			"name": "Ballon tyre",
+			"id": "ballon_tyre",
+			"cost": 3,
+			"ps": 70,
+			"energy": 0,
+			"durability": 140,
+			"mass": 100,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel", "amount": 2 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 2,
+			"type": "Rotor",
+			"name": "CR-1 Seagull",
+			"id": "cr1_seagull",
+			"cost": 3,
+			"ps": 240,
+			"energy": 0,
+			"durability": 176,
+			"mass": 270,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 400 },
+				{ "id": "copper", "amount": 400 },
+
+				{ "id": "medium_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 3,
+			"type": "Rotor",
+			"name": "Falco",
+			"id": "falco",
+			"cost": 6,
+			"ps": 400,
+			"energy": 0,
+			"durability": 254,
+			"mass": 390,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 200 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 200 },
+				{ "id": "plastic", "amount": 30 },
+
+				{ "id": "cr1_seagull", "amount": 1 },
+				{ "id": "borer", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 3,
+			"type": "Robotic leg",
+			"name": "Flamingo",
+			"id": "flamingo",
+			"cost": 6,
+			"ps": 400,
+			"energy": 0,
+			"durability": 1200,
+			"mass": 1400,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 200 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 200 },
+				{ "id": "plastic", "amount": 30 },
+
+				{ "id": "cr1_seagull", "amount": 1 },
+				{ "id": "fg_aggregator", "amount": 1 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 4,
+			"type": "Rotor",
+			"name": "CR-2 Petrel",
+			"id": "cr2_petrel",
+			"cost": 15,
+			"ps": 850,
+			"energy": 0,
+			"durability": 405,
+			"mass": 540,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 250 },
+				{ "id": "batteries", "amount": 80 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "falco", "amount": 1 },
+				{ "id": "razorback", "amount": 2 }
+			]
+		}, {
+			"faction": 1,
+			"rare": 4,
+			"type": "Rotor",
+			"name": "Hummingbird",
+			"id": "hummingbird",
+			"cost": 15,
+			"ps": 220,
+			"energy": 0,
+			"durability": 345,
+			"mass": 330,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 250 },
+				{ "id": "batteries", "amount": 80 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "falco", "amount": 1 },
+				{ "id": "maxwell", "amount": 2 }
+			]
+		}
+	],
+
+
+
 	"resources": [
 		{
 			"faction": 0,
