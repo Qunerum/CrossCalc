@@ -46,7 +46,8 @@ const rares = [
 	"Firestarters"
 ];
 // index.html
-let rareFilter = [false, false, false, false, false, false, false], collapsedCategories = {};
+let rareFilter = [false, false, false, false, false, false, false],
+	collapsedCategories = JSON.parse(localStorage.getItem('crosscalc_collapsed')) || {};
 function addBtn(container, id) {
 	const btn = document.createElement('button');
 	btn.className = 'rare-btn';
@@ -116,7 +117,8 @@ function displayItems(items) {
 		if (item.category && item.category !== lastCategory) {
 			lastCategory = item.category;
 			const count = categoryCounts[lastCategory] || 0,
-				isCollapsed = collapsedCategories[lastCategory] || false,
+				catKey = lastCategory.toLowerCase(),
+				isCollapsed = collapsedCategories[catKey] || false,
 				separator = document.createElement('div');
 			separator.className = `category-separator${isCollapsed ? ' collapsed' : ''}`;
 			separator.innerHTML = `<h3><span>${item.category} (${count})</span> <span class="collapse-arrow">▼</span></h3><hr>`;
@@ -124,7 +126,10 @@ function displayItems(items) {
 			wrapper.className = 'category-collapse-wrapper';
 			if (isCollapsed) wrapper.setAttribute('collapsed', '');
 			separator.onclick = () => {
-				collapsedCategories[lastCategory] = !collapsedCategories[lastCategory];
+				let currentCollapsed = JSON.parse(localStorage.getItem('crosscalc_collapsed')) || {};
+				currentCollapsed[catKey] = !currentCollapsed[catKey];
+				collapsedCategories = currentCollapsed;
+				localStorage.setItem('crosscalc_collapsed', JSON.stringify(collapsedCategories));
 				separator.classList.toggle('collapsed');
 				wrapper.toggleAttribute('collapsed');
 			};
@@ -299,7 +304,7 @@ async function initItemPage() {
 				<des><b>${category}:</b> <sl>${item.category}</sl></des>
 				<des><b>${type}:</b> ${item.type}</des>
 				<des><b>${ps}:</b> ${item.ps}</des>
-				<des><b>${durab}:</b> ${item.durability}</des>
+				<des><b>${durab}:</b> ${item.durability} pts.</des>
 				<des><b>${mass}:</b> ${item.mass} kg</des>
 				${craftingHTML}
 				`;

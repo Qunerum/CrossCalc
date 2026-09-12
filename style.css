@@ -5,12 +5,11 @@ body {
 	color: #ffffff;
 	padding: 30px;
 }
-.header-bar {
+.langs-bar {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	max-width: 400px;
-	margin-bottom: 20px;
+	gap: 5px;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
 }
 .lang-btn {
 	width: 40px; height: 26px;
@@ -18,7 +17,6 @@ body {
 	color: #fff;
 	border: 1px solid #333;
 	border-radius: 4px;
-	margin-bottom: 4px;
 	text-align: center;
 	cursor: pointer;
 	transition-duration: 0.2s;

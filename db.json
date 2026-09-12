@@ -1090,6 +1090,170 @@
 				{ "id": "goblin", "amount": 1 }
 			]
 		}, {
+			"faction": 2,
+			"rare": 5,
+			"type": "Shotgun",
+			"name": "Hammerfall",
+			"id": "hammerfall",
+			"cost": 75,
+			"ps": 1800,
+			"energy": -9,
+			"durability": 260,
+			"mass": 122,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "thunderbolt", "amount": 2 },
+				{ "id": "cheetah", "amount": 2 },
+				{ "id": "rd2_keen", "amount": 1 }
+			]
+		}, {
+			"faction": 2,
+			"rare": 5,
+			"type": "Melee weapon",
+			"name": "Harvester",
+			"id": "harvester",
+			"cost": 75,
+			"ps": 1600,
+			"energy": -8,
+			"durability": 760,
+			"mass": 648,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "electronics", "amount": 750 },
+				{ "id": "copper", "amount": 750 },
+				{ "id": "batteries", "amount": 750 },
+
+				{ "id": "mauler", "amount": 2 },
+				{ "id": "ammo_rack", "amount": 2 },
+				{ "id": "rn_seal", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Machine gun",
+			"name": "Vector",
+			"id": "vector",
+			"cost": 3,
+			"ps": 390,
+			"energy": -6,
+			"durability": 135,
+			"mass": 187,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "lm54_chord", "amount": 1 },
+				{ "id": "car_jack", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Machine gun",
+			"name": "ST-M23 Defender",
+			"id": "stm23_defender",
+			"cost": 3,
+			"ps": 390,
+			"energy": -6,
+			"durability": 239,
+			"mass": 195,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "lm54_chord", "amount": 1 },
+				{ "id": "r1_breeze", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 2,
+			"type": "Autonomous weapon",
+			"name": "AD-12 Falcon",
+			"id": "ad12_falcon",
+			"cost": 3,
+			"ps": 390,
+			"energy": -6,
+			"durability": 126,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 650 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "lm54_chord", "amount": 1 },
+				{ "id": "rs1_ruby", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 3,
+			"type": "Machine gun",
+			"name": "Sinus-0",
+			"id": "sinus0",
+			"cost": 6,
+			"ps": 570,
+			"energy": -6,
+			"durability": 164,
+			"mass": 212,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "vector", "amount": 1 },
+				{ "id": "ac43_rapier", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 3,
+			"type": "Autocannon",
+			"name": "AC50 Strom",
+			"id": "ac50_storm",
+			"cost": 6,
+			"ps": 760,
+			"energy": -8,
+			"durability": 185,
+			"mass": 210,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "stm23_defender", "amount": 1 },
+				{ "id": "ac43_rapier", "amount": 1 }
+			]
+		}, {
+			"faction": 3,
+			"rare": 3,
+			"type": "Autonomous weapon",
+			"name": "AD-13 Hawk",
+			"id": "ad13_hawk",
+			"cost": 6,
+			"ps": 570,
+			"energy": -6,
+			"durability": 141,
+			"mass": 128,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "ad12_falcon", "amount": 1 },
+				{ "id": "cs_taymyr", "amount": 1 }
+			]
+		}, {
 			"faction": 3,
 			"rare": 4,
 			"type": "Machine gun",
@@ -3373,6 +3537,344 @@
 				{ "id": "ampere", "amount": 1 },
 				{ "id": "chameleon", "amount": 1 },
 				{ "id": "dun_horse", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Heavy wheel",
+			"name": "Large wheel ST",
+			"id": "large_wheel_st",
+			"cost": 3,
+			"ps": 80,
+			"energy": 0,
+			"durability": 275,
+			"mass": 300,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "medium_wheel_st", "amount": 1 },
+				{ "id": "wwt1", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 2,
+			"type": "Heavy wheel",
+			"name": "Large wheel",
+			"id": "large_wheel",
+			"cost": 3,
+			"ps": 80,
+			"energy": 0,
+			"durability": 275,
+			"mass": 300,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 600 },
+				{ "id": "copper", "amount": 130 },
+
+				{ "id": "small_wheel", "amount": 1 },
+				{ "id": "wwt1", "amount": 1 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Heavy wheel",
+			"name": "Twin wheel ST",
+			"id": "twin_wheel_st",
+			"cost": 6,
+			"ps": 100,
+			"energy": 0,
+			"durability": 295,
+			"mass": 300,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "large_wheel_st", "amount": 2 },
+				{ "id": "ballon_tyre_st", "amount": 2 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 3,
+			"type": "Heavy wheel",
+			"name": "Twin wheel",
+			"id": "twin_wheel",
+			"cost": 6,
+			"ps": 100,
+			"energy": 0,
+			"durability": 295,
+			"mass": 300,
+			"craft_count": 2,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "large_wheel", "amount": 2 },
+				{ "id": "ballon_tyre", "amount": 2 }
+			]
+		}, {
+			"faction": 4,
+			"rare": 4,
+			"type": "Track",
+			"name": "Armored track",
+			"id": "armored_track",
+			"cost": 15,
+			"ps": 625,
+			"energy": 0,
+			"durability": 1300,
+			"mass": 1440,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "twin_wheel", "amount": 2 },
+				{ "id": "twin_wheel_st", "amount": 2 },
+				{ "id": "razorback", "amount": 1 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 3,
+			"type": "Heavy wheel",
+			"name": "APC wheel ST",
+			"id": "apc_wheel_st",
+			"cost": 6,
+			"ps": 100,
+			"energy": 0,
+			"durability": 230,
+			"mass": 250,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "large_wheel_st", "amount": 2 },
+				{ "id": "ballon_tyre_st", "amount": 2 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 3,
+			"type": "Heavy wheel",
+			"name": "APC wheel",
+			"id": "apc_wheel",
+			"cost": 6,
+			"ps": 100,
+			"energy": 0,
+			"durability": 230,
+			"mass": 250,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "large_wheel", "amount": 2 },
+				{ "id": "ballon_tyre", "amount": 2 }
+			]
+		}, {
+			"faction": 5,
+			"rare": 4,
+			"type": "Mechanical leg",
+			"name": "ML 200",
+			"id": "ml_200",
+			"cost": 15,
+			"ps": 400,
+			"energy": 0,
+			"durability": 790,
+			"mass": 900,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "sidekick", "amount": 1 },
+				{ "id": "apc_wheel_st", "amount": 2 },
+				{ "id": "razorback", "amount": 1 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 3,
+			"type": "Light wheel",
+			"name": "Lunar IV ST",
+			"id": "lunar_iv_st",
+			"cost": 6,
+			"ps": 80,
+			"energy": 0,
+			"durability": 155,
+			"mass": 50,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "racing_wheel_st", "amount": 2 },
+				{ "id": "landing_gear_st", "amount": 2 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 3,
+			"type": "Light wheel",
+			"name": "Lunar IV",
+			"id": "lunar_iv",
+			"cost": 6,
+			"ps": 80,
+			"energy": 0,
+			"durability": 155,
+			"mass": 50,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "racing_wheel", "amount": 2 },
+				{ "id": "landing_gear", "amount": 2 }
+			]
+		}, {
+			"faction": 6,
+			"rare": 4,
+			"type": "Hover",
+			"name": "Icarus VII",
+			"id": "icarus_vii",
+			"cost": 15,
+			"ps": 300,
+			"energy": 0,
+			"durability": 193,
+			"mass": 280,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "lunar_iv_st", "amount": 2 },
+				{ "id": "lunar_iv", "amount": 2 },
+				{ "id": "dun_horse", "amount": 1 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 3,
+			"type": "Medium wheel",
+			"name": "Shiv ST",
+			"id": "shiv_st",
+			"cost": 6,
+			"ps": 90,
+			"energy": 0,
+			"durability": 180,
+			"mass": 125,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "studded_wheel_st", "amount": 2 },
+				{ "id": "chained_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 3,
+			"type": "Medium wheel",
+			"name": "Shiv",
+			"id": "shiv",
+			"cost": 6,
+			"ps": 90,
+			"energy": 0,
+			"durability": 180,
+			"mass": 125,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 50 },
+				{ "id": "wires", "amount": 100 },
+				{ "id": "copper", "amount": 100 },
+				{ "id": "plastic", "amount": 50 },
+
+				{ "id": "studded_wheel", "amount": 2 },
+				{ "id": "chained_wheel", "amount": 2 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Heavy wheel",
+			"name": "Bigfoot ST",
+			"id": "bigfoot_st",
+			"cost": 15,
+			"ps": 225,
+			"energy": 0,
+			"durability": 670,
+			"mass": 330,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "shiv_st", "amount": 2 },
+				{ "id": "bat", "amount": 1 },
+				{ "id": "twin_wheel_st", "amount": 2 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Heavy wheel",
+			"name": "Bigfoot",
+			"id": "bigfoot",
+			"cost": 15,
+			"ps": 225,
+			"energy": 0,
+			"durability": 670,
+			"mass": 330,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "shiv", "amount": 2 },
+				{ "id": "bat", "amount": 1 },
+				{ "id": "twin_wheel", "amount": 2 }
+			]
+		}, {
+			"faction": 7,
+			"rare": 4,
+			"type": "Auger",
+			"name": "Meat Grinder",
+			"id": "meat_grinder",
+			"cost": 15,
+			"ps": 720,
+			"energy": 0,
+			"durability": 733,
+			"mass": 910,
+			"craft_count": 1,
+			"craft": [
+				{ "id": "scrap", "amount": 100 },
+				{ "id": "wires", "amount": 200 },
+				{ "id": "copper", "amount": 150 },
+				{ "id": "plastic", "amount": 100 },
+
+				{ "id": "shiv", "amount": 2 },
+				{ "id": "shiv_st", "amount": 2 },
+				{ "id": "buzzsaw", "amount": 1 }
 			]
 		}
 	],
